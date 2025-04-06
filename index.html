@@ -2,6 +2,7 @@
 <html>
     <head>
         <style>
+            
             :root {
                 --text: darkslategrey;
                 --wrapper: 100vw;
@@ -59,7 +60,8 @@
                 padding: 10px;
                 font-family: 'MS PGothic', sans-serif;
                 color: var(--text);
-                /* page background pattern */
+                background-image: radial-gradient(crimson, skyblue), url('/backgrounds/bg060.jpg');
+                background-blend-mode: screen;
             }
 
             .container {
@@ -113,12 +115,6 @@
                 /* Align items to the left */
                 gap: 10px;
                 /* Add some spacing between the images - test commit*/
-            }
-
-            body {
-                background-image: url('/backgrounds/alien_riverbed.jpg');
-                padding: 0;
-                margin: 0;
             }
 
             .grid-container div {
@@ -250,6 +246,7 @@
             .div9 {
                 grid-area: 8 / 5 / 10 / 9;
             }
+        
         </style>
     </head>
     <body class="container">
