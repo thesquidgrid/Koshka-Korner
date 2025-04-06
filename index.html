@@ -3,15 +3,10 @@
     <head>
         <style>
             
+            
+            
             :root {
-                --text: darkslategrey;
-                --wrapper: 100vw;
-                --gutter: 10px;
-                --rh: calc((var(--wrapper) - (3 * var(--gutter))) / 4);
-                --border: lightgrey;
-                --accent: teal;
-                --bg: #dce3e1;
-                --gradientBottom: rgb(240, 248, 255, .8);
+                --border: #ff00a738; 
             }
 
             * {
@@ -101,7 +96,7 @@
                 display: grid;
                 grid-template-columns: repeat(8, 1fr);
                 grid-template-rows: repeat(autofill, minmax(8.75vmax, 1fr));
-                background-color: #0000006e;
+                background-color: #c8eaffba;
                 padding: .5vw;
                 grid-column-gap: .25vw;
                 grid-row-gap: .25vw;
@@ -119,10 +114,12 @@
 
             .grid-container div {
                 aspect-ratio: auto;
-                border: 2px solid #000000;
                 border-radius: 8px;
-                background-color: #ffffff94;
-                color: #d9480f;
+                background-color: #fffffffd;
+                color: #000;
+                /*! border-style: ridge; */
+                box-shadow: 2px 2px 2px 2px #3c1ab936;
+                position: static;
             }
 
             #rcorners3 {
@@ -246,6 +243,8 @@
             .div9 {
                 grid-area: 8 / 5 / 10 / 9;
             }
+        
+        
         
         </style>
     </head>
