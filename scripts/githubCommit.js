@@ -1,4 +1,4 @@
-fetch('https://api.github.com/repos/TheSquidGrid/Koshka-Korner/commits?per_page=1')
+fetch('https://api.github.com/repos/TheSquidGrid/Koshka-Korner/commits?per_page=0')
   .then(res => res.json())
   .then(res => {
     document.getElementById('message').innerHTML = res[0].commit.message;
