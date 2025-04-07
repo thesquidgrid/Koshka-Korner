@@ -135,6 +135,8 @@
                 background-position: center;
             }
 
+            
+
             stickers {
                 display: grid;
             }
@@ -198,6 +200,7 @@
             .div3 {
                 /* tbd meow */
                 grid-area: 2 / 1 / 5 / 5;
+                height: 274.933px;
             }
 
             .div_topBookshelf {
@@ -213,15 +216,19 @@
             .sub1 {
                 height: 10px;
             }
-
+                /* height is hard coded in for the two divisions below due to formatting issues*/
             .div4 {
                 /* photos */
                 grid-area: 2 / 5 / 5 / 8;
+                height: 274.933px;
             }
 
             .div5 {
                 /* buttons */
+                
                 grid-area: 5 / 5 / 7 / 8;
+                height: 168.8px;
+                overflow: scroll;
             }
 
             .div6 {
@@ -253,6 +260,11 @@
             .div9 {
                 grid-area: 8 / 5 / 10 / 9;
             }
+
+            .ghTextOutline{
+                text-align: center;
+                
+            }
         
         
         
@@ -266,7 +278,8 @@
         <script src="scripts/album.js"></script>
         <script src="scripts/hoverover.js"></script>
         <script src= "scripts/githubCommit.js" ></script>
-        
+        <script src= "scripts/siteUpdateLog.js" ></script>
+
         <!-- end -->
         <div class="grid-container">
             <mp3>
@@ -314,7 +327,21 @@
             </div>
             <div class="div_bottomBookshelf"></div>
             <div class="div4"> photos</div>
-            <div class="div5"> buttons (index)</div>
+            <div class="div5">
+                <h3> Update Log: </h3>
+                <p class ="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+                    <p id = "date0"> loading...</p>
+                    <p id = "message0"> loading...</p>
+                <p class ="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
+                <p id = "date1"> loading...</p>
+                <p id = "message1"> loading...</p>
+
+                <p id = "date2"> loading...</p>
+                <p id = "message2"> loading...</p>
+
+                <p id = "date3"> loading...</p>
+                <p id = "message3"> loading...</p>
+            </div>
             <div class="div6">
                 <stickers>
                     <map name="noaimini5b">
