@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         :root {
+            --text: darkslategrey;
+            --border: lightgrey;
+            --accent: teal;
+            --bg: #dce3e1;
+            --gradientBottom: rgb(240, 248, 255, .8);
+         }
+
+         * {
+            box-sizing: border-box;
+         }
+
+         body {
+            padding: 10px;
+            font-family: 'MS PGothic', sans-serif;
+            color: var(--text);
+            /* page background pattern */
+         }
+
+         .container {
+            max-width: 70rem;
+            margin: 1vw auto;
+            border: 6px ridge var(--border);
+            outline: 3px solid var(--gradientTop);
+            outline-offset: 4px;
+            border-radius: 10px;
+            padding: 5px;
+            gap: 5px;
+         }
+         
+         @font-face { 
+         font-family: 'slkscre';
+         src: url(https://koshka-korner.neocities.org/slkscre.ttf); }
+         
+         stickers img {
+            font-size: 15px;
+            width: 150px;
+            /* Set desired width */
+            height: auto;
+            /* Maintain aspect ratio */
+         }
+
+         .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: dodgerblue;
+            padding: 10px;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+         }
+
+         .grid-container div {
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: #d9480f;
+         }
+
+         #rcorners3 {
+            border-radius: 30px;
+            background-size: cover;
+            background-position: center;
+            margin-top: 1vmax;
+            margin-bottom: 2vmax;
+            width: 14.5vmax;
+            height: 10vmax;
+         }
+         
+         
+
+         scroll-text {
+            
+            display: inline-block;
+            text-align: left;
+            white-space: nowrap;
+            /* animation properties */
+            transform: translateX(100%);
+            animation: my-animation 20s linear infinite;
+         }
+
+         @keyframes my-animation {
+            from {
+               transform: translateX(-120%);
+            }
+
+            to {
+               transform: translateX(270%);
+            }
+         }
+
+         .div1 {
+            grid-area: 1 / 1 / 2 / 2;
+         }
+
+         .div2 {
+            grid-area: 1 / 2 / 2 / 8;
+         }
+
+         .div3 {
+            grid-area: 2 / 1 / 5 / 4;
+         }
+
+         .div4 {
+            grid-area: 2 / 4 / 4 / 7;
+         }
+
+         .div5 {
+            grid-area: 4 / 4 / 5 / 7;
+         }
+
+         .div6 {
+            grid-area: 2 / 7 / 5 / 8;
+         }
+
+         .div7 {
+            grid-area: 5 / 1 / 6 / 8;
+            
+            overflow: hidden;
+            width: 100%;
+            white-space: nowrap;
+            font-family: 'slkscre';
+            font-size: 2em;
+            height: 2.5vmax;
+         }
+      </style>
+   </head>
+   <body class="container">
+      <!-- importing scripts -->
+      <script src=" listeningto.js" defer></script>
+      <script src=" album.js"></script>
+      <!-- end -->
+      <div class="grid-container">
+         <div class="div1">
+            <a> <p id="rcorners3">
+               <!-- FIX ASPECT RATIO OF RCORNERS3 -->
+            </p> </a>
+         </div>
+         <div class="div2"> title </div>
+         <div class="div3"> 
+          <!-- EDIT HEIGHT OF COMMENT WIDGET -->
+              <div id="c_widget"></div>
+              <script height="40vmax" src="comment-widget-pink/comment-widget.js"></script>
+         </div>
+         <div class="div4"> photos</div>
+         <div class="div5"> buttons</div>
+         <div class="div6">
+            <stickers>
+               <img src="Gifs/a13.gif" alt="Cat Image">
+               <img src="Gifs/blink1.gif" alt="blinkie with text that says: i blink therefore i am">
+               <img src="Gifs/linuxnow.gif" alt="linux now! text">
+               <img src="Gifs/catscape-ad@2x.gif" alt="catscape meow! text">
+               <img src="Gifs/evilnetnow.gif" alt="silly blinkie with text that says evil net now">
+               <img src="Koshka Korner.gif" alt="blinkie advertising this site!">
+               <img src="Gifs/counter.png" alt="Cat Image">
+               <img src="Gifs/neocities.gif" alt="neocities blinkie">
+               <img src="Gifs/linux-directory.gif" alt="cheaky gif saying: click linux directory here!">
+               <img src="Gifs/anarchy1.gif" alt="anarchy now! text">
+               <img src="Gifs/slayerette2.gif" alt="blinkie with text: slayerette">
+               <a href='https://blinkies.cafe' target='_blank'>
+                  <img src='blinkiesCafe-EX.gif' alt='blinkies.cafe | make your own blinkies!'>
+               </a>
+               <img src="Gifs/cartoon6.gif" alt="strawberry shortcake blinkie">
+               <a href='https://en.wikipedia.org/wiki/Special:Random' target='_blank'>
+                  <img src="Gifs/Click_Here_keyboard.gif" alt="click here">
+               </a>
+            </stickers>
+         </div>
+         <div class="div7">
+            <scroll-text>What I'm Listening to: <span id="track-info">Loading...</span>
+            </scroll-text>
+         </div>
+      </div>
+      
+      
+   </body>
+</html>
