@@ -18,7 +18,7 @@
       }
 
       .image_off,
-      th:hover .image_on {
+       a:hover .image_on {
         display: none;
         transform: translate(2px, -140px);
         position: absolute;
@@ -26,12 +26,12 @@
       }
 
       .image_on,
-      th:hover .image_off {
+      a:hover .image_off { /* change this to a div container something like this | | | | | <-- each div you hover over will triger the effect.*/
         display: block;
         position: absolute;
-        height: 80px;
-        width: 15px;
-        margin-top: -50px;
+        height: 140px;
+        width: 30px;
+        
       }
 
       img.sticky {
@@ -48,7 +48,7 @@
         padding: 10px;
         font-family: 'MS PGothic', sans-serif;
         color: var(--text);
-        background-image: radial-gradient(crimson, skyblue), url('/backgrounds/bg060.jpg');
+        background-image: radial-gradient(crimson, skyblue), url('backgrounds/bg060.jpg');
         background-blend-mode: screen;
         /* PLS PLS PLS WORK*/
       }
@@ -99,7 +99,7 @@
 
       .grid-container div {
         aspect-ratio: auto;
-        border-radius: 8px;
+        
         background-color: #fffffffd;
         color: #000;
         /*! border-style: ridge; */
@@ -174,6 +174,7 @@
         white-space: nowrap;
         font-family: 'slkscre';
         text-align: right;
+        border-top-right-radius: 8px;
         margin-left: 1.2rem;
         height: 8.75rem;
       }
@@ -295,7 +296,12 @@
         </header>
       </div>
       <div class="div3"> window? idk what i'll put here</div>
-      <div class="div_topBookshelf"></div>
+      <div class="div_topBookshelf">
+        <a id="book" style="display: block;">
+            <img class="image_off" src="book covers/annakarenincover.jpg" alt="book" style="height: 160px;   width: 100px;">
+            <img class="image_on" src="book spines/annakareninspine.png" alt="logo">
+        </a>
+      </div>
       <div class="div4"> photos</div>
       <div class="div5">
         <h3> Update Log: </h3>
