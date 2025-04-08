@@ -223,26 +223,34 @@
                 height: 274.933px;
             }
 
+            
             .div5 {
                 /* buttons */
-                
-                grid-area: 5 / 5 / 7 / 8;
-                height: 168.8px;
+                grid-area: 2 / 8 / 7 / 9;
+                width:140px;
+                height: 450px;
                 overflow: scroll;
                 text-align: center;
-                line-height: 2.1vh;
+                scrollbar-width: thin;
+                /*GET RID OF SCROLLBAR!!!!!!! OR AT LEAST MAKE IT TINY AND PINK!!!*/
+                line-height: 20px;
+                letter-spacing: 2px;
+                background-color: pink;
             }
 
             .div6 {
                 /* stickers !!!! */
-                height: 450px;
-                grid-area: 2 / 8 / 7 / 9;
+                
+                grid-area: 5 / 5 / 7 / 8;
+                height: 168.8px;
             }
+
 
             .div7 {
                 /* scrolling text */
                 grid-area: 7 / 1 / 8 / 9;
                 overflow: hidden;
+                
                 width: 100%;
                 height: 3vw;
                 white-space: nowrap;
@@ -265,7 +273,16 @@
 
             .ghTextOutline{
                 text-align: center;
-                font-family: arial, sans-serif
+                font-size: 7px;
+
+            }
+            
+
+            .ghUpdateContainer {
+                display: inline-block;
+                
+                height: auto;
+                margin: 6px;
                 
             }
         
@@ -330,6 +347,9 @@
             <div class="div4"> photos</div>
             <div class="div5">
                 <h3> Update Log: </h3>
+                <span class = "ghUpdateContainer">
+                    
+                <span class = "ghtext">
                 <p class ="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
                     <p id = "date0"> loading...</p>
                     <p id = "message0"> loading...</p>
@@ -344,7 +364,8 @@
                     <p id="date3">loading...</p>
                     <p id="message3">loading...</p>
                 <p class ="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
-
+            </span>    
+            </span>
             </div>
             <div class="div6">
                 <stickers>
