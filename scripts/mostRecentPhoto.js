@@ -1,35 +1,34 @@
-function LastModifiedFile()
+async function getLatestImage() {
+  const directoryUrl = 'Photos'; 
 
-{
+  try {
+    const response = await fetch(directoryUrl);
+    const text = await response.text();
 
-  var FolderName = "D:\\Test";
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
 
-  var FolderInfo = aqFileSystem.GetFolderInfo(FolderName);
+    const links = Array.from(doc.querySelectorAll('a'));
 
-  var Num = FolderInfo.Files.Count;
+    const imageLinks = links
+      .map(link => link.getAttribute('href'))
+      .filter(href => /\.(jpg|jpeg|png|gif|webp)$/i.test(href));
 
-  Log.Message("The folder contains " + Num + " files.")
+    const fullUrls = imageLinks.map(name => name);
 
-  for (var i=0; i < Num; i++)
+    const imagesWithDates = await Promise.all(fullUrls.map(async url => {
+      const res = await fetch(url, { method: 'HEAD' });
+      const lastModified = new Date(res.headers.get('Last-Modified'));
+      return { url, lastModified };
+    }));
 
-  {
+    imagesWithDates.sort((a, b) => b.lastModified - a.lastModified);
 
-      var FileDate = FolderInfo.Files.Item(i).DateLastModified;
+    document.getElementById('latest-image').src = imagesWithDates[0].url;
 
-      var a = new Array();
-
-      a = FileDate;
-
-      Log.Message(a);
-
-      // Develop your own sorting algorithm to sort this Array
-
-      // When you find an appropriate date (the last one)
-
-      // You can obtain the file name using the following code
-
-      //  FolderInfo.Files.Item(i).Path
-
+  } catch (error) {
+    console.error('Error fetching latest image:', error);
   }
-
 }
+
+getLatestImage();

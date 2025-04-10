@@ -12,3 +12,4 @@ fetch('https://api.github.com/repos/TheSquidGrid/Koshka-Korner/commits?per_page=
 
     // document.getElementById('fun_emoticon').innerHTML add laterz lol
   })
+  .catch(error => console.error('Error fetching commits:', error));
