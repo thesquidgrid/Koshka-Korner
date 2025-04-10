@@ -18,7 +18,7 @@
       }
 
       .image_off,
-       a:hover .image_on {
+       td:hover .image_on {
         display: none;
         transform: translate(2px, -140px);
         position: absolute;
@@ -26,11 +26,10 @@
       }
 
       .image_on,
-      a:hover .image_off { /* change this to a div container something like this | | | | | <-- each div you hover over will triger the effect.*/
+      td:hover .image_off { /* change this to a div container something like this | | | | | <-- each div you hover over will triger the effect.*/
         display: block;
         position: absolute;
-        height: 140px;
-        width: 30px;
+
         
       }
 
@@ -203,6 +202,7 @@
         /* top bookshelf */
         grid-area: 5 / 1 / 7 / 5;
         height: 150px;
+        overflow: hidden;
       }
 
       .sub1 {
@@ -269,6 +269,10 @@
         height: auto;
         margin: 6px;
       }
+
+      table.blueTable {
+        margin-left: 10px;;
+      }
     </style>
   </head>
   <body class="container">
@@ -299,10 +303,20 @@
       </div>
       <div class="div3"> window? idk what i'll put here</div>
       <div class="div_topBookshelf">
-        <a id="book" style="display: block;">
-            <img class="image_off" src="book covers/annakarenincover.jpg" alt="book" style="height: 160px;   width: 100px;">
-            <img class="image_on" src="book spines/annakareninspine.png" alt="logo">
-        </a>
+          <table class="blueTable">
+            <tbody style = "overflow: hidden">
+            <tr>
+            <td style = "height: 135px; width: 27px;">
+              <img class="image_off" src="book covers/annakarenincover.jpg" alt="book" style="height: 160px;   width: 100px;">
+              <img style = "margin-top: -67px; height: 135px; width: 27px;" class="image_on" src="book spines/annakareninspine.png" alt="logo">  
+            </td>
+            <td style = "height: 135px; width: 17px;">
+              <img class="image_off" src="book covers/shockandconfuseyou.jpg" alt="book" style="height: 160px;   width: 100px;">
+              <img style = "margin-top: -67px; height: 135px; width: 17px;" class="image_on" src="book spines/shockandconfuseyou.png" alt="logo">    
+            </td>
+            </tr>
+            </tbody>
+            </table>
       </div>
       <div class="div4"> photos</div>
       <div class="div5">
