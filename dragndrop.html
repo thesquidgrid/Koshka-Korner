@@ -1,27 +1,260 @@
-<!doctype html>
 <html>
-    <head>
-        <title>
-            TZDragg
-        </title>
-        <style>
-            #elem{
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                background-color: black;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -o-user-select: none;
-                -ms-user-select: none;
-                -khtml-user-select: none;     
-                user-select: none;
-                cursor: default;
-            }
-        </style>
-            <script src ="scripts/draggable.js"></script>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="/Graphics/Graphics/Favicon.png">
 
-    </head>
-    <body>
-    </body>
+<title>
+Dollz Revival
+</title>
+
+<script src = "scripts/jquery.js"> </script>
+
+<script src = "scripts/jqueryUI.js"> </script>
+
+<script src = "scripts/drag.js"> </script>
+
+
+<style>
+/* credits: html copied and pasted from dollz revival. edited to suit my needs*/
+@import url("reset.css"); /* This is to reset all default browser CSS to none.*/
+
+/*----------------------------------------------*/
+/*These are needed for the tab functionality and drag/drop functionality to work*/
+.ui-tabs-hide 			{ visibility:hidden;}
+.ui-tabs-panel { position:absolute; width:100%;}
+
+.draggedout { visibility:visible; position:absolute;}
+
+/*------------------------------------------------*/
+
+/*General body styles. Change to your own colors! */
+body {
+font-family: Font;
+font-size: 15px;
+background: #none;
+color: #a554bf;
+}
+
+@font-face {
+font-family: Font;
+src: url(/Font.ttf);
+}
+
+/* This specifies styles that will affect all the boxes. Change to your own colors!*/
+#bodyArea, #swatchesArea, .ui-tabs-panel{
+border: 1px solid #a554bf;
+background: #efbfff;
+}
+
+/* NOTE: You can change the colors for the tabs further below . . . .*/
+
+/*this puts rounded corners around the boxes*/
+.ui-corner-all, .ui-tabs-panel{
+-moz-border-radius: 5px; 
+-webkit-border-radius: 5px;
+}
+
+/* this puts rounded corners around the tabs*/
+.ui-corner-top a{
+-moz-border-radius-topleft:5px;
+-webkit-border-top-left-radius:5px;
+-moz-border-radius-topright:5px;
+-webkit-border-top-right-radius:5px;
+}
+
+/*This div contains the whole dollmaker. It can be placed anywhere on the page and everything will follow
+  Keep the height unspecified so that it can stretch to accomodate varied number of pieces */
+#dollmaker_container {
+position: absolute;
+top: 30px; /*Change these values to whatever you want*/
+left: 30px;
+}
+
+/*-------------------------------------------------------------------*/
+/* The box that contains the basebody */
+#bodyArea
+{
+position: absolute;
+top: 0px;
+width: 200px;
+height: 250px;
+text-align: center;
+}
+
+/* Position of the base body inside its container*/
+#bodyArea .skintone {margin-top:40px;}
+
+/*-------------------------------------------------------------------*/
+/*The tabbed area at the right that contains all the draggable pieces*/
+#piecesArea {
+position: absolute; 
+left: 275px;
+width: 500px;
+}
+
+/*Positioning for tabs area*/
+#tabsbar {
+text-align: left; 
+padding: 5px 10px 5px 10px; /* This extra space is required for browser compatibility */
+}
+
+
+/*Allows the tabs to be next to eachother*/
+#tabsbar li{
+display: inline;
+}
+
+/*Individual tabs. Change to your own colors!*/
+#tabsbar li a {
+/* !!!!!IE7 */ padding: 3px 10px 4px; 
+border: 1px solid #a554bf; 
+background-color: #efbfff; 
+color: #a554bf; 
+text-decoration: none;
+font-weight:bold;
+}
+
+/*Selected tab. Change to your own colors!*/
+#tabsbar .ui-state-active a {
+border-bottom: 1px solid #a554bf;
+background-color: #efbfff; /* This needs to be the the same as the background color of the panel.*/
+position:relative;
+z-index:2;
+}
+
+/*-------------------------------------------------------------------*/
+/* The panel under the tabs that contain the props*/
+.ui-tabs-panel{ 
+overflow:visible; /* so that the panel extends as you add pieces to it*/
+clear:both;
+padding:5px;
+}
+
+#piecesArea div {
+padding: 10px 10px 0;
+}
+
+
+#piecesArea img{
+margin: 0 10px 10px 0;
+cursor: url("/Graphics/Graphics/CursorMove.gif"), move;
+}
+
+body {
+background-color: #c1dcff;
+cursor: url("/Graphics/Graphics/CursorAuto.gif"), auto;
+}
+
+a {
+text-decoration: none;
+cursor: url("/Graphics/Graphics/CursorPointer.gif"), pointer;
+}
+
+@font-face {
+font-family: Font;
+src: url(/Fonts/Font4.ttf);
+}
+
+p {
+color: #a200ff;
+font-family: Font;
+font-size: 10pt;
+}
+
+{
+overflow: scroll;
+overflow-x: hidden;
+}
+::-webkit-scrollbar {
+width: 0;  /* Remove scrollbar space */
+background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.PSA {
+border-style: solid;
+border-color: #a200ff;
+border-width: 1px;
+border-radius: 5px;
+position: absolute;
+top: 300px;
+left: 30px;
+}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>Dollmaker</title>
+<link rel="stylesheet" type="text/css" href="styles/mainstylesheet.css" charset="utf-8">
+	
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scripts/drag.js"></script>
+</head>
+
+<!-- You can put your own content up here. You can move the dollmaker on the page using CSS (see mainstylesheet.css for details) -->
+
+<div id="dollmaker_container">
+<div id="bodyArea" class="ui-corner-all">
+</div>
+
+</div>
+<div id="piecesArea">
+<!-- **EDIT HERE** 
+This list corresponds to the tabs. Change the names of the tabs to
+whatever you want. You can also add or remove any number of them. 
+
+Have a look further below. Notice the <div id="tabs-x"> tags. Each
+of those correspond to a different tab and has that tab's content in it. 
+If you add or remove tabs, update the corresponding div as well. (the
+href of the link and the id of the div have to match!)
+-->
+
+<ul id="tabsbar">
+<li><a href="#tabs-1">Bodies</a></li>
+<li><a href="#tabs-2">Footwear</a></li>
+<li><a href="#tabs-3">Bottoms</a></li>
+<li><a href="#tabs-4">Fullbody</a></li>
+<li><a href="#tabs-5">Tops</a></li>
+<li><a href="#tabs-6">Hair</a></li>
+<li><a href="#tabs-7">Accessories</a></li>
+
+</ul>
+
+<!-- **EDIT HERE** 
+These divs correspond the the content of each tab. Put all the img tags
+for your props in them, corresponding to their categories. 
+-->
+
+<div id="tabs-1"><!--Bodies-->
+
+
+</div>
+	
+<div id="tabs-2"><!--Footwear-->
+
+</div>
+
+<div id="tabs-3"><!--Bottoms-->
+
+</div>
+
+<div id="tabs-4"><!--Fullbody-->
+
+</div>
+
+<div id="tabs-5"><!--Tops-->
+
+</div>
+
+<div id="tabs-6"><!--Hair-->
+
+</div>
+
+<div id="tabs-7"><!--Accessories-->
+
+</div>
+
+</div><!--PiecesArea-->
+
+<img src="/Graphics/Graphics/ZoomPSA.gif" class="PSA">
+
+</body>
 </html>
