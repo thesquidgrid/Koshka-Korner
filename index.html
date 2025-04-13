@@ -293,12 +293,31 @@
       }
 
       photoContainer img {
-        width: 200px;
-        height: 150px;
+        width: 60%;
+        height: 60%;
+        border-radius: 200px;
       }
+
+      #elem{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: black;
+                color: white;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                -ms-user-select: none;
+                -khtml-user-select: none;     
+                user-select: none;
+                cursor: default
+            }
+
+      
     </style>
   </head>
   <body class="container">
+    
     <!-- importing scripts -->
     <script src="scripts/listeningto.js" defer></script>
     <script src="scripts/album.js"></script>
@@ -306,11 +325,12 @@
     <script src="scripts/githubCommit.js"></script>
     <script src="scripts/siteUpdateLog.js"></script>
     <script src="scripts/mostRecentPhoto.js"></script>
+    <script src ="scripts/draggable.js"></script>
     <!-- end -->
     <div class="grid-container">
       <mp3>
         <a href="https://www.last.fm/user/soupie03">
-          <img src="mp3small.png">
+          <img class = "draggable" src="mp3small.png">
         </a>
       </mp3>
       <div id="rcorners3" class="div1"></div>
@@ -325,7 +345,10 @@
           <p style="transform: scaleY(1.5);">Koshka-Korner</p>
         </header>
       </div>
-      <div class="div3"> window? idk what i'll put here</div>
+
+      <div class="div3"> 
+        
+      </div>
       <div class="div_topBookshelf">
         <span style="overlay: 1;">
           <img style="position: absolute; z-index: 10;" src="Library/shelf/left.png"></img>
@@ -404,10 +427,15 @@
     <img style="alignment: centered;" src="thefuture.png">
     <img style="alignment: centered;" src="futurebuttons.png">
     <h3> Past future plans lol: </h3>
+
     <img style="alignment: centered;" src="future.png">
     <p>
       <!-- <script language="JavaScript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40310487&main=1"></script> -->
       <!--  <noscript><img src="//counter1.fc2.com/counter_img.php?id=40310487&main=1" /></noscript> -->
     </p>
+
+    <div id='elem' onmousedown='tzdragg.startMoving(event);' onmouseup='tzdragg.stopMoving();' style='top: 200px; left: 200px;' > drag me! </div>
+
   </body>
+  
 </html>
