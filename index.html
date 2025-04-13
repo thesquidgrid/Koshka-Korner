@@ -18,7 +18,7 @@
       }
 
       .image_off,
-       td:hover .image_on {
+      td:hover .image_on {
         display: none;
         transform: translate(2px, -120px);
         position: absolute;
@@ -26,11 +26,10 @@
       }
 
       .image_on,
-      td:hover .image_off { /* change this to a div container something like this | | | | | <-- each div you hover over will triger the effect.*/
+      td:hover .image_off {
+        /* change this to a div container something like this | | | | | <-- each div you hover over will triger the effect.*/
         display: block;
         position: absolute;
-
-        
       }
 
       img.sticky {
@@ -98,7 +97,6 @@
 
       .grid-container div {
         aspect-ratio: auto;
-        
         background-color: #fffffffd;
         color: #000;
         /*! border-style: ridge; */
@@ -202,7 +200,6 @@
         /* top bookshelf */
         grid-area: 5 / 1 / 7 / 5;
         height: 200px;
-        
       }
 
       .sub1 {
@@ -269,13 +266,15 @@
         height: auto;
         margin: 6px;
       }
-      .bluetable{
+
+      .bluetable {
         margin-left: 40px;
         z-index: 1000;
       }
 
-      bluetable, th, td {
-        
+      bluetable,
+      th,
+      td {
         /* border: 1px solid;
         background-color: #af95e9; */
         height: 160px;
@@ -285,6 +284,18 @@
         position: relative;
       }
 
+      photoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 254px;
+        background-image: url("Photos/index layout/bg.png");
+      }
+
+      photoContainer img {
+        width: 200px;
+        height: 150px;
+      }
     </style>
   </head>
   <body class="container">
@@ -294,7 +305,7 @@
     <script src="scripts/hoverover.js"></script>
     <script src="scripts/githubCommit.js"></script>
     <script src="scripts/siteUpdateLog.js"></script>
-    <script src = "scripts/mostRecentPhoto.js"></script>
+    <script src="scripts/mostRecentPhoto.js"></script>
     <!-- end -->
     <div class="grid-container">
       <mp3>
@@ -316,40 +327,41 @@
       </div>
       <div class="div3"> window? idk what i'll put here</div>
       <div class="div_topBookshelf">
-        <span style = "overlay: 1;">
-        <img style = "position: absolute; z-index: 10;" src = "Library/shelf/left.png"></img>
-        <img style = "position: absolute; z-index: 10; margin-left: 436px;" src = "Library/shelf/right.png"></img>
-        <img style = "position: absolute; z-index: 100; margin-left: 28px;" src = "Library/shelf/top.png"></img>
-        <img style = "position: absolute; z-index: 0; margin-left: 28px; margin-top: 36px;" src = "Library/shelf/background.png"></img>
-      </span>
-        <table class="blueTable" style = "margin-left: 30px; margin-top: 20px">
-          <lib style = "overflow: hidden">
-          <tr>
-          
-            <td style = "z-inde;">
-              <a href = "Library/library.html"><img class="image_off" src="book covers/annakarenincover.jpg" alt="book" style="height: 160px; width: 100px;"></a>
-              <img style = "z-index: 0; height: 160px"class="image_on" src="book spines/annakareninspine.png" alt="logo">
-            </td>
-            <td>
-              <a href = "Library/library.html"><img class="image_off" src="book covers/shockandconfuseyou.jpg" alt="book" style="height: 160px; width: 100px;"></a>
-              <img style = "z-index: 0; height: 160px; width: 20px;"class="image_on" src="book spines/shockandconfuseyou.png" alt="logo">
-            </td>
-
-           
-          </tr>
-
+        <span style="overlay: 1;">
+          <img style="position: absolute; z-index: 10;" src="Library/shelf/left.png"></img>
+          <img style="position: absolute; z-index: 10; margin-left: 436px;" src="Library/shelf/right.png"></img>
+          <img style="position: absolute; z-index: 100; margin-left: 28px;" src="Library/shelf/top.png"></img>
+          <img style="position: absolute; z-index: 0; margin-left: 28px; margin-top: 36px;" src="Library/shelf/background.png"></img>
+        </span>
+        <table class="blueTable" style="margin-left: 30px; margin-top: 20px">
+          <lib style="overflow: hidden">
+            <tr>
+              <td style="z-inde;">
+                <a href="Library/library.html">
+                  <img class="image_off" src="book covers/annakarenincover.jpg" alt="book" style="height: 160px; width: 100px;">
+                </a>
+                <img style="z-index: 0; height: 160px" class="image_on" src="book spines/annakareninspine.png" alt="logo">
+              </td>
+              <td>
+                <a href="Library/library.html">
+                  <img class="image_off" src="book covers/shockandconfuseyou.jpg" alt="book" style="height: 160px; width: 100px;">
+                </a>
+                <img style="z-index: 0; height: 160px; width: 20px;" class="image_on" src="book spines/shockandconfuseyou.png" alt="logo">
+              </td>
+            </tr>
           </lib>
-
-          
-          </table>
-
-
-        
+        </table>
+      </div>
+      <div class="div4">
+        <!-- <img style = "position: absolute" src = "camera/camera button.png"></img> -->
+        <img style="position: absolute" src="Photos/index layout/border-top.png"></img>
+        <img style="position: absolute; margin-top: 170px;" src="Photos/index layout/border-bottom.png"></img>
+        <photoContainer>
+          <img src="Photos/Felis_catus-cat_on_snow.jpg"></img>
+        </photoContainer>
         
       </div>
-      
-      <div class="div4"> photos</div>
-      <div class="div5" style = " background: #d9ff003d;">
+      <div class="div5" style=" background: #d9ff003d;">
         <h3> Update Log: </h3>
         <span class="ghUpdateContainer">
           <span class="ghtext">
@@ -397,6 +409,5 @@
       <!-- <script language="JavaScript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40310487&main=1"></script> -->
       <!--  <noscript><img src="//counter1.fc2.com/counter_img.php?id=40310487&main=1" /></noscript> -->
     </p>
-    
   </body>
 </html>
