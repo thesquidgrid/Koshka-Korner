@@ -297,22 +297,6 @@
         height: 60%;
         border-radius: 200px;
       }
-
-      #elem{
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                background-color: black;
-                color: white;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -o-user-select: none;
-                -ms-user-select: none;
-                -khtml-user-select: none;     
-                user-select: none;
-                cursor: default
-            }
-
       
     </style>
   </head>
@@ -347,8 +331,10 @@
       </div>
 
       <div class="div3"> 
-        
-      </div>
+
+       <iframe style = "height:400px; width: 500px"src = "dragndrop.html"></iframe>
+
+        </div>
       <div class="div_topBookshelf">
         <span style="overlay: 1;">
           <img style="position: absolute; z-index: 10;" src="Library/shelf/left.png"></img>
@@ -434,7 +420,6 @@
       <!--  <noscript><img src="//counter1.fc2.com/counter_img.php?id=40310487&main=1" /></noscript> -->
     </p>
 
-    <div id='elem' onmousedown='tzdragg.startMoving(event);' onmouseup='tzdragg.stopMoving();' style='top: 200px; left: 200px;' > drag me! </div>
 
   </body>
   
