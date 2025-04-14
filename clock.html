@@ -1,0 +1,33 @@
+<!-- credit to: http://www.desvan.tk/-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clock</title>
+<style type="text/css">
+A:link{color:#FFFFFF;text-decoration:none}
+A:visited{color:#FFFFFF;text-decoration:none}
+A:active{color:#FFFFFF;text-decoration:none}
+</style>
+</head>
+
+<body style="background-color: transparent;" topmargin=0 leftmargin=0>
+<atarget="_blank"><img src="c01.gif" alt="consigue tu reloj aqui ^^" width="90" height="73"></a> 
+<div id="Layer1" style="position:absolute; left:19px; top:25px; width:27px; height:20px; z-index:1"> 
+  <!-- Clock Part 1 - Put Anywhere Before Part 2 -->
+  <a title="Haz click aqui para conseguir tu reloj" target="_blank"> 
+  <script language="JavaScript">
+
+function tS(){ x=new Date(); x.setTime(x.getTime()); return x; } 
+function lZ(x){ return (x>9)?x:'0'+x; } 
+function dT(){ if(fr==0){ fr=1; document.write('<font size=2 face=Times new roman color=#FF9122><span id="tP">'+eval(oT)+'</span></font>'); } tP.innerText=eval(oT); setTimeout('dT()',1000); } 
+var fr=0,oT="' '+lZ(tS().getHours())+':'+lZ(tS().getMinutes())+':'+lZ(tS().getSeconds())+' '";
+</script>
+  <!-- Clock Part 1 - Ends Here  -->
+  <!-- Clock Part 2 - This Starts/Displays Your Clock -->
+  <script language="JavaScript">dT();</script>
+  <!-- Clock Part 2 - Ends Here -->
+  </a> </div>
+</body>
+</html>
+
+
