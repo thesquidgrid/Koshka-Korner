@@ -17,20 +17,6 @@
         position: absolute;
       }
 
-      .image_off,
-      td:hover .image_on {
-        display: none;
-        transform: translate(2px, -120px);
-        position: absolute;
-        z-index: 100;
-      }
-
-      .image_on,
-      td:hover .image_off {
-        /* change this to a div container something like this | | | | | <-- each div you hover over will triger the effect.*/
-        display: block;
-        position: absolute;
-      }
 
       img.sticky {
         position: fixed;
@@ -297,6 +283,24 @@
         height: 60%;
         border-radius: 200px;
       }
+
+      #s-m-t-tooltip { /* from doqmeat.*/
+	border-radius: 10px;
+  border: 3px dashed rgba(47, 0, 255, 0.574);
+  border-left: 4px solid rgba(238, 57, 57, 0.633);
+  background-image: url("notebook.png");
+  background-size: 300px 290px;
+  max-width: 200px;
+	color: rgb(0, 0, 0);
+	font-size: 16px;
+	text-align: center;
+  
+	padding: 5px;
+	z-index: 9999;
+  margin-left: -300px;
+  margin-top: -100px;
+
+}
     </style>
   </head>
   <body class="container">
@@ -308,6 +312,9 @@
     <script src="scripts/siteUpdateLog.js"></script>
     <script src="scripts/mostRecentPhoto.js"></script>
     <script src="scripts/draggable.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="scripts/tooltip-jquary.js"></script>
+	  <script src="scripts/tooltip.js"></script>
     <!-- end -->
     <div class="grid-container">
       <mp3>
@@ -330,31 +337,23 @@
       <div class="div3">
         <iframe style="height:400px; width: 500px" src="dragndrop.html"></iframe>
       </div>
+
       <div class="div_topBookshelf">
+        
         <span style="overlay: 1;">
           <img style="position: absolute; z-index: 10;" src="Library/shelf/left.png"></img>
           <img style="position: absolute; z-index: 10; margin-left: 436px;" src="Library/shelf/right.png"></img>
           <img style="position: absolute; z-index: 100; margin-left: 28px;" src="Library/shelf/top.png"></img>
           <img style="position: absolute; z-index: 0; margin-left: 28px; margin-top: 36px;" src="Library/shelf/background.png"></img>
         </span>
-        <table class="blueTable" style="margin-left: 30px; margin-top: 20px">
-          <lib style="overflow: hidden">
-            <tr>
-              <td style="z-inde;">
-                <a href="Library/library.html">
-                  <img class="image_off" src="book covers/annakarenincover.jpg" alt="book" style="height: 160px; width: 100px;">
-                </a>
-                <img style="z-index: 0; height: 160px" class="image_on" src="book spines/annakareninspine.png" alt="logo">
-              </td>
-              <td>
-                <a href="Library/library.html">
-                  <img class="image_off" src="book covers/shockandconfuseyou.jpg" alt="book" style="height: 160px; width: 100px;">
-                </a>
-                <img style="z-index: 0; height: 160px; width: 20px;" class="image_on" src="book spines/shockandconfuseyou.png" alt="logo">
-              </td>
-            </tr>
-          </lib>
-        </table>
+
+        <p style = "z-index: 9; position: absolute; margin-top: 30px; margin-left: 30px;">
+          <img title="coworker described it as 'russian family matters'. " style="z-index: 0; height: 160px; width: 30px;" src="book spines/annakareninspine.png" alt="logo">              </td>
+          <img title="i wanted to resonate a lot more with this book than i do. its very fun - lavery takes well known classics and writes quite beautifly about classical tragedies. 
+          I am just not the intendent audience. " style="z-index: 0; height: 160px; width: 20px;" src="book spines/shockandconfuseyou.png" alt="logo">              </td>
+         </p>
+        
+      
       </div>
       <div class="div4">
         
@@ -418,5 +417,8 @@
       <!-- <script language="JavaScript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40310487&main=1"></script> -->
       <!--  <noscript><img src="//counter1.fc2.com/counter_img.php?id=40310487&main=1" /></noscript> -->
     </p>
+
+    
+     
   </body>
 </html>
