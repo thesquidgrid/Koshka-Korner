@@ -52,7 +52,7 @@
       }
 
       mp3 {
-        z-index: 500;
+        z-index: 10;
         position: absolute;
       }
 
@@ -88,6 +88,10 @@
         /*! border-style: ridge; */
         box-shadow: 2px 2px 2px 2px #3c1ab936;
         position: static;
+        border: 2px solid rgba(0, 0, 0, 0.702);
+  
+        
+        overflow: hidden;
       }
 
       #rcorners3 {
@@ -185,7 +189,9 @@
       .div_topBookshelf {
         /* top bookshelf */
         grid-area: 5 / 1 / 7 / 5;
-        height: 200px;
+        height: 202px;
+        overflow: hidden;
+        position: relative;
       }
 
       .sub1 {
@@ -202,7 +208,7 @@
       .div5 {
         /* github updates*/
         background-color: pink;
-        height: 451px;
+        height: 455px;
         grid-area: 2 / 8 / 7 / 9;
         width: 150px;
         overflow: scroll;
@@ -215,7 +221,7 @@
       .div6 {
         /* stickers !!!! */
         grid-area: 5 / 5 / 7 / 8;
-        height: 200px;
+        height: 202px;
       }
 
       .div7 {
@@ -301,8 +307,14 @@
   margin-top: -0vw;
 }
     </style>
+    
   </head>
+  
   <body class="container">
+    <span style="position: absolute; z-index: 0; margin-top: -75px; margin-left: -170px;">
+      <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
+    </span>
+    
     <!-- importing scripts -->
     <script src="scripts/listeningto.js" defer></script>
     <script src="scripts/album.js"></script>
@@ -315,15 +327,19 @@
     <script src="scripts/tooltip-jquary.js"></script>
 	  <script src="scripts/tooltip.js"></script>
     <!-- end -->
+   
+
     <div class="grid-container">
       <mp3>
         <a href="https://www.last.fm/user/soupie03">
-          <img class="draggable" src="mp3small.png">
+          <img src="mp3small.png">
         </a>
       </mp3>
+      
       <div id="rcorners3" class="div1"></div>
       <div class="div2">
         <span style="text-align: right;">
+          
           <!-- github commits: --> Latest Update : <a class=githublink href=https://github.com/thesquidgrid/Koshka-Korner>
             <p id="message" style="display:inline;">Loading</p>
             <p id="date" style="display:inline;">Loading</p>
@@ -339,12 +355,17 @@
 
       <div class="div_topBookshelf">
         
-        <span style="overlay: 1;">
-          <img style="position: absolute; z-index: 10;" src="Library/shelf/left.png"></img>
-          <img style="position: absolute; z-index: 10; margin-left: 436px;" src="Library/shelf/right.png"></img>
-          <img style="position: absolute; z-index: 100; margin-left: 28px;" src="Library/shelf/top.png"></img>
-          <img style="position: absolute; z-index: 0; margin-left: 28px; margin-top: 36px;" src="Library/shelf/background.png"></img>
+        <!-- how i make it fit in the div. thank you stack overflow https://stackoverflow.com/questions/5513382/absolute-position-and-overflowhidden -->
+        <span style="position:relative;">
+          <span style="position:absolute;">
+            <img style="position: absolute;" src="Library/shelf/left.png"></img>
+            <img style="position: absolute; margin-left: 425px;" src="Library/shelf/right.png"></img>
+            <img style="position: absolute; margin-left: 28px;" src="Library/shelf/top.png"></img>
+            <img style="position: absolute; margin-left: 28px; margin-top: 33px;" src="Library/shelf/background.png"></img>  
+          </span>  
         </span>
+        
+          
 
         <span style = "z-index: 9; position: absolute; margin-top: 30px; margin-left: 30px;">
           <img title="coworker described it as 'russian family matters'. " style="z-index: 0; height: 160px; width: 30px;" src="book spines/annakareninspine.png" alt="logo">              </td>
@@ -360,9 +381,7 @@
         <photoContainer>
           <img src="Photos/Felis_catus-cat_on_snow.jpg"></img>
         </photoContainer>
-        <span style="position:absolute; z-index: 1000; margin-top: -60px;">
-          <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="73" scrolling="no"></iframe>
-        </span>
+        
       </div>
       
       <div class="div5" style=" background: #d9ff003d;">
