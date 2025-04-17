@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/thesquidgrid/koshkakorner/issues"
   },
-  "homepage": "https://github.com/thesquidgrid/koshkakorner#readme"
+  "homepage": "https://github.com/thesquidgrid/koshkakorner#readme",
+  "dependencies": {
+    "ditherjs": "^0.10.0"
+  }
 }

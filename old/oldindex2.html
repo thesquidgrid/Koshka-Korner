@@ -1,0 +1,442 @@
+<!-- very nice looking, just not my style -->
+<!DOCTYPE html> - <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Koshka-Korner</title>
+    <style>
+      :root {
+        --border: #ff00a738;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      #bookshelf {
+        width: 50px;
+        height: 100px;
+        position: absolute;
+      }
+
+
+      img.sticky {
+        position: fixed;
+        top: 100;
+        left: 0;
+        width: 200px;
+        height: auto;
+        z-index: 9999;
+        pointer-events: none;
+      }
+
+      body {
+        padding: 10px;
+        font-family: 'MS PGothic', sans-serif;
+        color: var(--text);
+        background-image: radial-gradient(crimson, skyblue), url('backgrounds/bg060.jpg');
+        background-blend-mode: screen;
+        /* PLS PLS PLS WORK*/
+      }
+
+      .container {
+        width: 60rem;
+        height: auto;
+        position: relative;
+        margin: 4vw auto;
+        border: 6px ridge var(--border);
+        outline: 3px solid var(--gradientTop);
+        outline-offset: 4px;
+        border-radius: 10px;
+        padding: 5px;
+        gap: 5px;
+        z-index: 50;
+      }
+
+      mp3 {
+        z-index: 10;
+        position: absolute;
+      }
+
+      mp3 img {
+        width: 8.9rem;
+      }
+
+      .container .endRow {
+        margin-bottom: 20px;
+      }
+
+      @font-face {
+        font-family: 'slkscre';
+        src: url(https://koshka-korner.neocities.org/fonts/slkscre.ttf);
+      }
+
+      .grid-container {
+        aspect-ratio: auto;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(autofill, minmax(8.75vmax, 1fr));
+        background-color: #c8eaffba;
+        padding: .5vw;
+        grid-column-gap: .25vw;
+        grid-row-gap: .25vw;
+        margin-top: -25px;
+      }
+
+      .grid-container div {
+        aspect-ratio: auto;
+        background-color: #fffffffd;
+        color: #000;
+        /*! border-style: ridge; */
+        box-shadow: 2px 2px 2px 2px #3c1ab936;
+        position: static;
+        border: 2px solid rgba(0, 0, 0, 0.702);
+  
+        
+        overflow: hidden;
+      }
+
+      #rcorners3 {
+        width: 109px;
+        height: 104px;
+        background-size: cover;
+        background-position: center;
+        margin-top: 24px;
+        margin-left: 16.7px;
+      }
+
+      .nowPlayingContainer {
+        display: inline-block;
+        height: auto;
+        margin: 6px;
+      }
+
+      stickers {
+        display: grid;
+      }
+
+      stickers img {
+        width: 100%;
+        height: 150%;
+        /* Each image fills its grid cell */
+        object-fit: contain;
+        /* Prevents stretching */
+      }
+
+      scroll-text {
+        display: inline-block;
+        text-align: left;
+        white-space: nowrap;
+        /* animation properties */
+        transform: translateX(0%);
+        animation: my-animation 50s linear infinite;
+      }
+
+      header {
+        white-space: nowrap;
+        text-shadow: 1px 1px 2px #f60000, 0 0 25px #0000ffd6, 0 0 5px #ff00cb;
+        font-size: 4.3em;
+        color: #af95e9;
+        text-shadow: 5px 5px #2000ff26;
+        margin-top: -25px;
+      }
+
+      @keyframes my-animation {
+        from {
+          transform: translateX(-100%);
+        }
+
+        to {
+          transform: translateX(100%);
+        }
+      }
+
+      .div1 {
+        /* album cover */
+        grid-area: 1 / 1 / 2 / 2;
+        aspect-ratio: 1 / 1;
+        border-radius: 25px;
+        z-index: 1000;
+      }
+
+      .div2 {
+        /* header */
+        grid-area: 1 / 2 / 2 / 9;
+        white-space: nowrap;
+        font-family: 'slkscre';
+        text-align: right;
+        border-top-right-radius: 8px;
+        margin-left: 1.2rem;
+        height: 8.75rem;
+      }
+
+      a.githublink:link {
+        text-decoration: none;
+      }
+
+      a.githublink:visited {
+        text-decoration: none;
+      }
+
+      a.githublink:hover {
+        text-decoration: none;
+      }
+
+      .div3 {
+        /* tbd meow */
+        grid-area: 2 / 1 / 5 / 5;
+        height: 250px
+      }
+
+      .div_topBookshelf {
+        /* top bookshelf */
+        grid-area: 5 / 1 / 7 / 5;
+        height: 202px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .sub1 {
+        height: 10px;
+      }
+
+      /* height is hard coded in for the two divisions below due to formatting issues*/
+      .div4 {
+        /* photos */
+        grid-area: 2 / 5 / 5 / 8;
+        height: 250px
+      }
+
+      .div5 {
+        /* github updates*/
+        background-color: pink;
+        height: 455px;
+        grid-area: 2 / 8 / 7 / 9;
+        width: 150px;
+        overflow: scroll;
+        text-align: center;
+        scrollbar-width: none;
+        line-height: 20px;
+        letter-spacing: 2px;
+      }
+
+      .div6 {
+        /* stickers !!!! */
+        grid-area: 5 / 5 / 7 / 8;
+        height: 202px;
+      }
+
+      .div7 {
+        /* scrolling text */
+        grid-area: 7 / 1 / 8 / 9;
+        overflow: hidden;
+        width: 100%;
+        height: 3vw;
+        white-space: nowrap;
+        font-family: 'slkscre';
+        font-size: 2vw;
+      }
+
+      .div8 {
+        grid-area: 8 / 1 / 10 / 5;
+      }
+
+      .div8 iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      .div9 {
+        grid-area: 8 / 5 / 10 / 9;
+      }
+
+      .ghTextOutline {
+        text-align: center;
+        font-size: 7px;
+      }
+
+      .ghUpdateContainer {
+        display: inline-block;
+        height: auto;
+        margin: 6px;
+      }
+
+      .bluetable {
+        margin-left: 40px;
+        z-index: 1000;
+      }
+
+      bluetable,
+      th,
+      td {
+        /* border: 1px solid;
+        background-color: #af95e9; */
+        height: 160px;
+        width: 30px;
+        display: inline-block;
+        margin-top: 10px;
+        position: relative;
+      }
+
+      photoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 254px;
+        background-image: url("Photos/index layout/bg.png");
+      }
+
+      photoContainer img {
+        width: 60%;
+        height: 60%;
+        border-radius: 200px;
+      }
+
+      #s-m-t-tooltip { /* from doqmeat.*/
+	border-radius: 10px;
+  border: 3px dashed rgba(47, 0, 255, 0.574);
+  border-left: 4px solid rgba(238, 57, 57, 0.633);
+  background-image: url("notebook.png");
+  background-size: 300px 290px;
+  max-width: 200px;
+	color: rgb(0, 0, 0);
+	font-size: 16px;
+	text-align: center;
+  
+	padding: 5px;
+	z-index: 9999;
+  margin-left: -13vmax;
+  margin-top: -0vw;
+}
+    </style>
+    
+  </head>
+  
+  <body class="container">
+    <span style="position: absolute; z-index: 0; margin-top: -75px; margin-left: -170px;">
+      <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
+    </span>
+    
+    <!-- importing scripts -->
+    <script src="scripts/listeningto.js" defer></script>
+    <script src="scripts/album.js"></script>
+    <script src="scripts/hoverover.js"></script>
+    <script src="scripts/githubCommit.js"></script>
+    <script src="scripts/siteUpdateLog.js"></script>
+    <script src="scripts/mostRecentPhoto.js"></script>
+    <script src="scripts/draggable.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="scripts/tooltip-jquary.js"></script>
+	  <script src="scripts/tooltip.js"></script>
+    <!-- end -->
+   
+
+    <div class="grid-container">
+      <mp3>
+        <a href="https://www.last.fm/user/soupie03">
+          <img src="mp3small.png">
+        </a>
+      </mp3>
+      
+      <div id="rcorners3" class="div1"></div>
+      <div class="div2">
+        <span style="text-align: right;">
+          
+          <!-- github commits: --> Latest Update : <a class=githublink href=https://github.com/thesquidgrid/Koshka-Korner>
+            <p id="message" style="display:inline;">Loading</p>
+            <p id="date" style="display:inline;">Loading</p>
+          </a>
+        </span>
+        <header>
+          <p style="transform: scaleY(1.5);">Koshka-Korner</p>
+        </header>
+      </div>
+      <div class="div3">
+        <iframe style="height:400px; width: 500px" src="dragndrop.html"></iframe>
+      </div>
+
+      <div class="div_topBookshelf">
+        
+        <!-- how i make it fit in the div. thank you stack overflow https://stackoverflow.com/questions/5513382/absolute-position-and-overflowhidden -->
+        <span style="position:relative;">
+          <span style="position:absolute;">
+            <img style="position: absolute;" src="Library/shelf/left.png"></img>
+            <img style="position: absolute; margin-left: 425px;" src="Library/shelf/right.png"></img>
+            <img style="position: absolute; margin-left: 28px;" src="Library/shelf/top.png"></img>
+            <img style="position: absolute; margin-left: 28px; margin-top: 33px;" src="Library/shelf/background.png"></img>  
+          </span>  
+        </span>
+        
+          
+
+        <span style = "z-index: 9; position: absolute; margin-top: 30px; margin-left: 30px;">
+          <img title="coworker described it as 'russian family matters'. " style="z-index: 0; height: 160px; width: 30px;" src="book spines/annakareninspine.png" alt="logo">              </td>
+          <img title="i wanted to resonate a lot more with this book than i do. its very fun - lavery's setup is personal essays dispersed with (fanfiction?) of classical tragedies.          I am just not the intendent audience. " style="z-index: 0; height: 160px; width: 20px;" src="book spines/shockandconfuseyou.png" alt="logo">              </td>
+        </span>
+        
+      
+      </div>
+      <div class="div4">
+        
+        <img style="position: absolute" src="Photos/index layout/border-top.png"></img>
+        <img style="position: absolute; margin-top: 170px;" src="Photos/index layout/border-bottom.png"></img>
+        <photoContainer>
+          <img src="Photos/Felis_catus-cat_on_snow.jpg"></img>
+        </photoContainer>
+        
+      </div>
+      
+      <div class="div5" style=" background: #d9ff003d;">
+        <h3> Update Log: </h3>
+        <span class="ghUpdateContainer">
+          <span class="ghtext">
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+            <p id="date0"> loading...</p>
+            <p id="message0"> loading...</p>
+            <p class="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
+            <p id="date1"> loading...</p>
+            <p id="message1">loading...</p>
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+            <p id="date2">loading...</p>
+            <p id="message2">loading...</p>
+            <p class="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
+            <p id="date3">loading...</p>
+            <p id="message3">loading...</p>
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+          </span>
+        </span>
+      </div>
+      <div class="div6">
+        <stickers>
+          <map name="noaimini5b">
+            <area href="https://baccyflap.com/noai" shape="rect" coords="50,32,122,58" target="_blank" alt="no ai webring" title="no ai webring">
+            <area href="https://baccyflap.com/noai/?prv&s=kot" target="_top" shape="rect" coords="4,4,38,34" alt="previous" title="previous">
+            <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="132,44,140,56" alt="random" title="random">
+            <area href="https://baccyflap.com/noai/?nxt&s=kot" target="_top" shape="rect" coords="138,4,170,34" alt="next" title="next">
+          </map>
+            <!--webbot bot="HTMLMarkup" startspan -->
+          </span>
+          <img style="width:176px;image-rendering:pixelated" usemap="#noaimini5b" src="https://baccyflap.com/noai/miniwidget5.gif" alt="the top of a fuzzy, black sphere with two arrows rising from it, one curving to the left, one to the right. across the bulk of the sphere it reads NO AI / WEBRING in squiggly, uneven letters and next to those words is a small question mark">
+        </stickers>
+      </div>
+      <div class="div7">
+        <scroll-text>What I'm Listening to: <span id="track-info">Loading...</span>
+        </scroll-text>
+      </div>
+      <div class="div8" style="height: 40vw;">
+        <iframe src="https://koshka-korner.atabook.org"></iframe>
+      </div>
+      <div class="div9">m </div>
+    </div>
+    <img style="alignment: centered;" src="thefuture.png">
+    <img style="alignment: centered;" src="futurebuttons.png">
+    <h3> Past future plans lol: </h3>
+    <img style="alignment: centered;" src="future.png">
+    <p>
+      <!-- <script language="JavaScript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40310487&main=1"></script> -->
+      <!--  <noscript><img src="//counter1.fc2.com/counter_img.php?id=40310487&main=1" /></noscript> -->
+    </p>
+
+    
+     
+  </body>
+</html>
