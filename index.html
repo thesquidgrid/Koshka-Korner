@@ -54,6 +54,8 @@
       }
 
       @media screen and (max-width: 1040px) {
+
+        /* for mobile viewing*/
         #wrapHeader {
           width: auto;
           display: grid;
@@ -81,7 +83,20 @@
           align-content: center;
         }
 
-		
+        .trackInfo {
+          font-size: 10vw;
+        }
+
+        .myImg {
+          height: 40vw;
+        }
+
+        .myImg {
+          display: block;
+          height: 100%;
+          width: 40vw;
+          /* maintain aspect ratio*/
+        }
 
         .deco {
           display: none;
@@ -90,12 +105,21 @@
         .ghUpdateContainer {
           background-color: rgb(0, 0, 0);
           border: 1px solid;
+          font-size: 1.8rem;
+          line-height: 1.3rem;
         }
 
         .noaiwebring {
           text-align: center;
           font-size: 6vw;
           text-decoration: none;
+        }
+
+        .mp3 {
+          display: block;
+          margin: auto;
+          z-index: 1000;
+          color: orange;
         }
       }
 
@@ -131,21 +155,25 @@
           text-align: center;
           font-size: 2.2rem;
         }
+
+        .header p {
+          white-space: nowrap;
+        }
+
+        .myImg {
+          height: 100px;
+        }
       }
 
       .mp3img img {
         height: 199px;
         width: 169px;
         z-index: 999;
-        position: relative;
       }
 
       .mp3 {
-        position: relative;
-        z-index: 1000;
-        color: orange;
+        display: block;
       }
-	  
 
       @font-face {
         font-family: 'AcPlus_IBM_EGA_8x14';
@@ -158,9 +186,25 @@
         font-family: AcPlus_IBM_EGA_8x14;
       }
 
-	  .trackInfo{
-			text-align: center;
-		}
+      .header p {
+        font-size: 7.4rem;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange;
+        /* Keeps the content on a single line */
+        margin: .5 auto;
+        /* Gives that scrolling effect as the typing happens */
+        text-shadow: 0 0 20px rgb(255, 115, 1);
+        animation: typing 3.5s steps(30, end), blink-caret .65s step-end 8;
+        border-right: .15em solid transparent;
+      }
+
+      .trackInfo {
+        text-align: center;
+      }
 
       .siteupdate {
         overflow: scroll;
@@ -187,34 +231,34 @@
       .myImg {
         display: block;
         margin: auto;
-        height: 100px;
+        margin-top: 10px;
       }
 
-      
+      .myImg:hover {
+        color: #111;
+        background: orange;
+        box-shadow: 0px 0px 1rem orange;
+      }
 
       .title {
         color: #ffa500;
         animation: glow 100s ease-in-out infinite alternate;
       }
 
-      .header p {
-        font-size: 7.4rem;
-        text-align: center;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        overflow: hidden;
-        /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid orange;
-        /* The typwriter cursor */
-        white-space: nowrap;
-        /* Keeps the content on a single line */
-        margin: .5 auto;
-        /* Gives that scrolling effect as the typing happens */
-        text-shadow: 0 0 20px rgb(255, 115, 1);
-        animation: typing 3.5s steps(30, end), blink-caret .65s step-end 8;
-        border-right: .15em solid transparent;
+	  #s-m-t-tooltip {
+        /* template from doqmeat. - edited by me -w-*/
+        border-radius: 10px;
+        border: 3px solid black;
+        background-color: rgb(32, 29, 29);
+        max-width: 200px;
+        font-family: AcPlus_IBM_EGA_8x14;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        z-index: 9999;
+        margin: 10px;
       }
-
       /* The typing effect */
       @keyframes typing {
         from {
@@ -238,6 +282,28 @@
           border-color: orange;
         }
       }
+
+      photoContainer {
+        border:
+          3px solid orange;
+		  box-shadow: 0 0 10px #ff0000;
+        margin:
+          auto;
+        align-content: center;
+        display: block;
+
+      }
+
+      photoContainer img {
+        width: 60%;
+        height: 60%;
+        position:relative;
+		z-index: 1000;
+      }
+
+      .book {
+        align-content: center;
+      }
     </style>
   <body style="background-color: #000000;">
     <script src="scripts/listeningto.js" defer></script>
@@ -255,12 +321,14 @@
       <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
     </span>
     <div id="wrapHeader" class="wrapHeader">
-      <div class="mp3" style="color: orange; border-bottom: none;">
-        <img class="myImg" id="myImg" src="mp3.png">
-        <span class = "trackInfo">
+      <div class="mp3" style="color: orange; border-bottom: none; width: auto;">
+        <a href="https://www.last.fm/user/soupie03">
+          <img class="myImg" id="myImg" src="mp3.png">
+        </a>
+        <span class="trackInfo">
           <p id="TrackName"></p>
           <p id="ArtistName"></p>
-		</span>
+        </span>
       </div>
       <div class="header" id="header">
         <p class="title">Koshka-Korner</p>
@@ -297,7 +365,13 @@
       <!-- spacer for siteupdate-->
     </div>
     <div id="wrapBookAndPhotos">
-      <div id=book></div>
+      <div class=book>
+        <photocontainer>
+                    <img title="coworker described it as 'russian family matters'. " style="z-index: 0; height: 160px; width: 30px;" src="book spines/annakareninspine.png" alt="logo">              </td>
+          <img title="i wanted to resonate a lot more with this book than i do. its very fun - lavery's setup is personal essays dispersed with (fanfiction?) of classical tragedies.          I am just not the intendent audience. " style="z-index: 0; height: 160px; width: 20px;" src="book spines/shockandconfuseyou.png" alt="logo">              </td>
+
+        </photocontainer>
+      </div>
       <div id=photos> photos </div>
       <div style="border-top: none; background-color: rgb(0, 0, 0); "></div>
       <!-- spacer for updates-->
