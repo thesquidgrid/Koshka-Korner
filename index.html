@@ -1,236 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- based on code by des from doqmeat! thanks for making your source code open :) -->
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- based on code by des from doqmeat! thanks for making your source code open :) -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        box-sizing: border-box;
+        list-style-position: inside;
+      }
 
-<style>
-	* {
-	box-sizing: border-box;
-	list-style-position: inside;
-}
+      :root {
+        --fonts: gaegu-r, ms pgothic, arial;
+        --viewfinderWidth: 60rem;
+      }
 
-:root {
-	--fonts: gaegu-r, ms pgothic, arial;
-	--viewfinderWidth: 60rem;
-}
+      #wrapHeader {
+        width: var(--viewfinderWidth);
+        height: auto;
+        position: relative;
+        margin: 2vw auto;
+        display: grid;
+        background-image: url(bg.png);
+        grid-template-areas:
+          "mp3 header siteupdate"
+          ". webrings .";
+        grid-template-columns: 170px 600px 200px;
+        grid-template-rows: 100px 100px;
+      }
 
+      #wrapBookAndPhotos {
+        width: var(--viewfinderWidth);
+        height: auto;
+        position: relative;
+        margin-top: -2vw;
+        margin-right: auto;
+        margin-bottom: 2vw;
+        margin-left: auto;
+        display: grid;
+        background-image: url(bg.png);
+        grid-template-areas:
+          "book photos siteupdate";
+        grid-template-columns: 385px 385px 200px;
+        grid-template-rows: 220px;
+      }
 
-#wrapHeader {
-	width: var(	--viewfinderWidth);
-    height: auto;
-    position: relative;
-    margin: 2vw auto;
-	display: grid;
-	background-image: url(bg.png);
-	grid-template-areas:
-		"mp3 header siteupdate"
-		". webrings .";
-    grid-template-columns: 170px 600px 200px;
-	grid-template-rows: 100px 100px;
-    
-}
+      #wrapHeader div {
+        border: 1px solid #ffa60034;
+      }
 
+      #wrapBookAndPhotos div {
+        border: 1px solid #ffa60034;
+      }
 
+      @media screen and (max-width: 1040px) {
+        #wrapHeader {
+          width: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          /* single column */
+          grid-template-areas:
+            "mp3"
+            "header"
+            "siteupdate"
+            "webrings";
+          grid-template-rows: auto;
+          align-content: center;
+        }
 
-#wrapBookAndPhotos {
-	width: var(	--viewfinderWidth);
-    height: auto;
-    position: relative;
-    margin-top:  -2vw;
-	margin-right: auto;
-	margin-bottom: 2vw;
-	margin-left: auto;
-	display: grid;
-	background-image: url(bg.png);
-	grid-template-areas:
-		"book photos siteupdate";
-    grid-template-columns: 385px 385px 200px;
-    grid-template-rows: 220px;
-}
+        #wrapBookAndPhotos {
+          width: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          /* single column */
+          grid-template-areas:
+            "book"
+            "photos"
+            "siteupdate";
+          grid-template-rows: auto;
+          align-content: center;
+        }
 
-#wrapHeader div{
- border: 1px solid #ffa60034;
-}
+		
 
-#wrapBookAndPhotos div{
-border: 1px solid #ffa60034;
-}
+        .deco {
+          display: none;
+        }
 
-@media screen and (max-width: 1040px) {
-	#wrapHeader {
-		width: auto;
-		display: grid;
-		grid-template-columns: 1fr; /* single column */
-		grid-template-areas:
-			"mp3"
-			"header"
-			"siteupdate"
-			"webrings";
-		grid-template-rows: auto;
-        align-content: center;
-	}
+        .ghUpdateContainer {
+          background-color: rgb(0, 0, 0);
+          border: 1px solid;
+        }
 
-	#wrapBookAndPhotos {
-		width: auto;
-		display: grid;
-		grid-template-columns: 1fr; /* single column */
-		grid-template-areas:
-			"book"
-			"photos"
-			"siteupdate";
-		grid-template-rows: auto;
-        align-content: center;
-	}
+        .noaiwebring {
+          text-align: center;
+          font-size: 6vw;
+          text-decoration: none;
+        }
+      }
 
-	.deco {
-		display: none;
-	}
+      .noaiwebring {
+        text-align: center;
+        display: block;
+        margin: auto;
+      }
 
-	.mp3{
-		display: flex; 
-		justify-content: center;
-	}
+      .noaiwebring a,
+      a:hover,
+      a:focus,
+      a:active {
+        text-decoration: none;
+        color: orange;
+        text-shadow: 0 0 20px rgb(255, 115, 1);
+      }
 
-	.ghUpdateContainer{
-		background-color: rgb(0, 0, 0);
-		border: 1px solid;
-	}
-	
-	.noaiwebring{
-		text-align:center; 
-		font-size: 6vw;
-		text-decoration: none;
-	}
-}
+      .wrapHeader {
+        container-name: myContainer;
+        container-type: inline-size;
+      }
 
-.noaiwebring{
-		text-align:center; 
-		display:block; 
-		margin:auto;
-}
+      @media only screen and (min-width: 1040px) {
 
-.noaiwebring  a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: orange;
-	  text-shadow: 0 0 20px rgb(255, 115, 1);
- }
+        /* for editing update log background. */
+        .siteupdate {
+          background-color: black;
+          border: none;
+        }
 
-.wrapHeader {
-  container-name: myContainer;
-  container-type: inline-size;
-}
+        .noaiwebring {
+          text-align: center;
+          font-size: 2.2rem;
+        }
+      }
 
-@media only screen and (min-width: 1040px) { /* for editing update log background. */
-  .siteupdate {  
-    background-color: black;
-	border: none;
-  }
-  
-  .noaiwebring{
-		text-align:center; 
-		font-size: 2.2rem;
-	}
-}
+      .mp3img img {
+        height: 199px;
+        width: 169px;
+        z-index: 999;
+        position: relative;
+      }
 
-.mp3img img{
-	height: 199px;
-  	width: 169px;
-	z-index: 999;
-	position: relative;
-}
+      .mp3 {
+        position: relative;
+        z-index: 1000;
+        color: orange;
+      }
+	  
 
-.mp3 {
-	color: orange;
-}
-
-
-	@font-face {
+      @font-face {
         font-family: 'AcPlus_IBM_EGA_8x14';
         /*a name to be used later*/
         src: url('fonts/AcPlus_IBM_EGA_8x14.ttf');
         /*URL to font*/
-    }
+      }
 
-	body{
-		font-family: AcPlus_IBM_EGA_8x14;
-	}
+      body {
+        font-family: AcPlus_IBM_EGA_8x14;
+      }
 
+	  .trackInfo{
+			text-align: center;
+		}
 
-.siteupdate{
-	overflow: scroll;
-    text-align: center;
-    line-height: 20px;
-	display: flex; 
-	justify-content: center;
-	z-index: 999;
-	/*background-color: aqua; */
-	border-bottom: none;
-    min-height: 419px; 
-	scrollbar-width: none; 
-  color: orange;
-  text-align: center;
-  animation: glow 5s ease-in-out infinite alternate;
+      .siteupdate {
+        overflow: scroll;
+        text-align: center;
+        line-height: 20px;
+        display: flex;
+        justify-content: center;
+        z-index: 999;
+        /*background-color: aqua; */
+        border-bottom: none;
+        min-height: 419px;
+        scrollbar-width: none;
+        color: orange;
+        text-align: center;
+        animation: glow 5s ease-in-out infinite alternate;
+      }
 
-}
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 3px #df710a70, 0 0 30px #e63600b0, 0 0 40px #ff5100, 0 0 50px #522f06, 0 0 60px #e2e600, 0 0 70px #574f06;
+        }
+      }
 
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0  3px #df710a70,  0 0 30px #e63600b0, 0 0 40px #ff5100, 0 0 50px #522f06, 0 0 60px #e2e600, 0 0 70px #574f06;
-  }
-}
-
-
-.myImg {
-		display: block;
-		margin:auto;
+      .myImg {
+        display: block;
+        margin: auto;
         height: 100px;
       }
-.mp3 {
-	position:relative;
-	z-index: 1000;
-	color: orange;
-}
 
-.title{
-	color: #ffa500;
-	animation: glow 100s ease-in-out infinite alternate;
+      
 
-}
-.header p{
-	font-size: 7.6rem;
-	text-align: center;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: .5 auto; /* Gives that scrolling effect as the typing happens */
-  text-shadow: 0 0 20px rgb(255, 115, 1);
-  animation: typing 3.5s steps(30, end), blink-caret .65s step-end 8; 
-  border-right: .15em solid transparent;
-  
-}
+      .title {
+        color: #ffa500;
+        animation: glow 100s ease-in-out infinite alternate;
+      }
 
+      .header p {
+        font-size: 7.4rem;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange;
+        /* The typwriter cursor */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: .5 auto;
+        /* Gives that scrolling effect as the typing happens */
+        text-shadow: 0 0 20px rgb(255, 115, 1);
+        animation: typing 3.5s steps(30, end), blink-caret .65s step-end 8;
+        border-right: .15em solid transparent;
+      }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0
+        }
 
+        to {
+          width: 100%
+        }
+      }
 
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
+        from,
+        to {
+          border-color: transparent
+        }
 
-</style>
-<body style = "background-color: #000000;">
+        50% {
+          border-color: orange;
+        }
+      }
+    </style>
+  <body style="background-color: #000000;">
     <script src="scripts/listeningto.js" defer></script>
     <script src="scripts/album.js"></script>
     <script src="scripts/hoverover.js"></script>
@@ -241,66 +250,57 @@ border: 1px solid #ffa60034;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="scripts/tooltip-jquary.js"></script>
     <script src="scripts/tooltip.js"></script>
-	<script src = "scripts/time.js"></script>
-
-	<span class="deco" style="position: absolute; margin-top: -32px;">
-        <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
+    <script src="scripts/time.js"></script>
+    <span class="deco" style="position: absolute; margin-top: -32px;">
+      <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
+    </span>
+    <div id="wrapHeader" class="wrapHeader">
+      <div class="mp3" style="color: orange; border-bottom: none;">
+        <img class="myImg" id="myImg" src="mp3.png">
+        <span class = "trackInfo">
+          <p id="TrackName"></p>
+          <p id="ArtistName"></p>
+		</span>
+      </div>
+      <div class="header" id="header">
+        <p class="title">Koshka-Korner</p>
+      </div>
+      <div class="siteupdate" class="border: none;">
+        <span class="ghUpdateContainer">
+          <h3> Update Log: </h3>
+          <span class="ghtext">
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+            <p id="date0"> loading...</p>
+            <p id="message0"> loading...</p>
+            <p class="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
+            <p id="date1"> loading...</p>
+            <p id="message1">loading...</p>
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+            <p id="date2">loading...</p>
+            <p id="message2">loading...</p>
+            <p class="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
+            <p id="date3">loading...</p>
+            <p id="message3">loading...</p>
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+          </span>
+        </span>
+      </div>
+      <div style="border-right: none; border-top: none;"></div>
+      <!--  spacer -->
+      <div id="webrings">
+        <span class="noaiwebring">
+          <a href="https://baccyflap.com/noai/?prv&s=kot" target="_top">« prev</a> | <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
+          <a style="font-size:100%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> | <a href="https://baccyflap.com/noai/?nxt&s=kot" target="_top">next »</a>
+      </div>
       </span>
-
-	<div id = "wrapHeader" class = "wrapHeader">
-		
-		<div class = "mp3" style = "color: orange">
-		   <img class = "myImg" id="myImg" src="mp3.png">
-		<div>
-			<p id="TrackName" ></p>
-			<p id ="ArtistName"></p>
-		</div>	
-		   
-		</div>
-		<div class = "header" id = "header">
-			<p class = "title" >Koshka-Korner</p>
-		</div>
-		<div class = "siteupdate" class = "border: none;">
-			<span class="ghUpdateContainer">
-			    <h3> Update Log: </h3>
-			    <span class="ghtext">
-				<p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
-				<p id="date0"> loading...</p>
-				<p id="message0"> loading...</p>
-				<p class="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
-				<p id="date1"> loading...</p>
-				<p id="message1">loading...</p>
-				<p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
-				<p id="date2">loading...</p>
-				<p id="message2">loading...</p>
-				<p class="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
-				<p id="date3">loading...</p>
-				<p id="message3">loading...</p>
-				<p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
-			  </span>
-			</span>
-		</div>
-		<div style = "border-right: none; border-top: none;"> </div> <!--  spacer -->
-		<div id = "webrings" >
-			<span class = "noaiwebring">
-				<a href="https://baccyflap.com/noai/?prv&s=kot" target="_top">« prev</a> |
-				<a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
-				<a style="font-size:100%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> |
-				<a href="https://baccyflap.com/noai/?nxt&s=kot" target="_top">next »</a>
-				</div> 
-			</span>
-		
-		<div style = "border-top: none; border-bottom: none; background-color: rgb(0, 0, 0);"> </div> <!-- spacer for siteupdate-->
-	</div>
-
-	<div id = "wrapBookAndPhotos">
-		<div id = book>
-			
-		</div>
-		<div id = photos>
-			photos
-		</div>
-		<div style = "border-top: none; background-color: rgb(0, 0, 0); "></div> <!-- spacer for updates-->
-	</div>	
-</body>
+      <div style="border-top: none; border-bottom: none; background-color: rgb(0, 0, 0);"></div>
+      <!-- spacer for siteupdate-->
+    </div>
+    <div id="wrapBookAndPhotos">
+      <div id=book></div>
+      <div id=photos> photos </div>
+      <div style="border-top: none; background-color: rgb(0, 0, 0); "></div>
+      <!-- spacer for updates-->
+    </div>
+  </body>
 </html>
