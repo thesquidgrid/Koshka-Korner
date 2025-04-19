@@ -10,7 +10,7 @@ async function fetchRecentTrack() {
             const albumCover = track.image[track.image.length - 1]["#text"]; // Largest album cover
 
             if (albumCover) {
-                document.getElementById("rcorners3").style.backgroundImage = `url('${albumCover}')`;
+                document.getElementById("myImg").src = albumCover;
             }
         }
     } catch (error) {
