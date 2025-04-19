@@ -1,4 +1,4 @@
-async function fetchRecentTrack() {
+async function fetchRecentTrackAlbum() {
     const url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=soupie03&api_key=216aec7c1eb5598e43a42c593d722057&format=json";
 
     try {
@@ -11,6 +11,8 @@ async function fetchRecentTrack() {
 
             if (albumCover) {
                 document.getElementById("myImg").src = albumCover;
+                document.getElementById("img2").src = albumCover;
+
             }
         }
     } catch (error) {
@@ -18,4 +20,4 @@ async function fetchRecentTrack() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", fetchRecentTrack);
+document.addEventListener("DOMContentLoaded", fetchRecentTrackAlbum);
