@@ -437,6 +437,22 @@
         margin-top: 0px;
       }
 
+      @media (pointer: coarse), (hover: none) {
+  [title]:focus::after {
+    content: attr(title);
+    position: absolute;
+    top: 90%;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid rgb(128, 128, 128);
+    font-size: 5vw;
+    z-index: 999;
+    text-shadow: 0 0 1vw rgb(255, 115, 1);
+
+  }
+
+}
+
       
     </style>
   <body style="background-color: #000000;">
@@ -520,10 +536,10 @@
     <div id="wrapBookAndPhotos">
       <div class=book>
         <bookContainer>
-          <span title="coworker described it as 'russian family matters'. " class="bookBox">
+          <span tabindex="0" title="coworker described it as 'russian family matters'. " class="bookBox">
             <p style="font-size: 2rem;">Anna Karenina </p>
           </span>
-          <span class="bookBox" title="i wanted to resonate a lot more with this book than i do. its very fun - lavery's setup is personal essays dispersed with (fanfiction?) of classical tragedies. I am just not the intendent audience.">
+          <span tabindex="0" class="bookBox" title="i wanted to resonate a lot more with this book than i do. its very fun - lavery's setup is personal essays dispersed with (fanfiction?) of classical tragedies. I am just not the intendent audience.">
             <p> Something that may shock or discredit you</p>
           </span>
         </bookContainer>
