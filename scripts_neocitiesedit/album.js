@@ -11,7 +11,6 @@ async function fetchRecentTrackAlbum() {
 
             if (albumCover) {
                 document.getElementById("myImg").src = albumCover;
-                document.getElementById("img2").src = albumCover;
 
             }
         }

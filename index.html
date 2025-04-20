@@ -21,12 +21,13 @@
         position: relative;
         margin: 2vw auto;
         display: grid;
-        background-image: url(bg.png);
+        b
         grid-template-areas:
           "mp3 header siteupdate"
           ". webrings .";
         grid-template-columns: 170px 600px 200px;
         grid-template-rows: 100px 100px;
+        background: black;
       }
 
       #wrapBookAndPhotos {
@@ -38,11 +39,43 @@
         margin-bottom: 2vw;
         margin-left: auto;
         display: grid;
-        background-image: url(bg.png);
+       
         grid-template-areas:
           "book photos siteupdate";
         grid-template-columns: 385px 385px 200px;
         grid-template-rows: 220px;
+        background: black;
+      }
+
+      #wrapperSiteButtons{
+        width: var(--viewfinderWidth);
+        height: auto;
+        position: relative;
+        margin-top: -2vw;
+        margin-right: auto;
+        margin-bottom: 2vw;
+        margin-left: auto;
+        display: grid;
+        
+        grid-template-areas:
+          "about-me sitemap resources contact fun";
+        grid-template-columns: 194px 194px 194px 194px 194px;
+        grid-template-rows: 50px;
+        background: black;
+      }
+
+      .wrapperSiteButtons p {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        overflow: hidden;
+        color: orange;
+      }
+
+      #wrapperSiteButtons div {
+        border: 1px solid rgba(170, 113, 6, 0.521);
+        background: black;
       }
 
       #wrapHeader div {
@@ -68,6 +101,7 @@
             "webrings";
           grid-template-rows: auto;
           align-content: center;
+          background: black;
         }
 
         #wrapBookAndPhotos {
@@ -81,7 +115,25 @@
             "siteupdate";
           grid-template-rows: auto;
           align-content: center;
+          background: black;
         }
+
+        #wrapperSiteButtons{
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+          /* single column */
+          grid-template-areas:
+            "about-me"
+            "sitemap"
+            "reasource"
+            "contact"
+            "fun";
+          grid-template-rows: auto;
+          align-content: center;
+          background: black;
+          grid-template-rows: auto;
+      }
 
         .trackInfo {
           font-size: 10vw;
@@ -184,7 +236,10 @@
 
       body {
         font-family: AcPlus_IBM_EGA_8x14;
-      }
+        background-image: url('bg.png');
+        background-blend-mode: screen;
+        
+         }
 
       .header p {
         font-size: 7.4rem;
@@ -213,7 +268,6 @@
         display: flex;
         justify-content: center;
         z-index: 999;
-        /*background-color: aqua; */
         border-bottom: none;
         min-height: 419px;
         scrollbar-width: none;
@@ -245,7 +299,7 @@
         animation: glow 100s ease-in-out infinite alternate;
       }
 
-	  #s-m-t-tooltip {
+      #s-m-t-tooltip {
         /* template from doqmeat. - edited by me -w-*/
         border-radius: 10px;
         border: 3px solid rgb(255, 255, 255);
@@ -261,6 +315,7 @@
         z-index: 9999;
         margin: 10px;
       }
+
       /* The typing effect */
       @keyframes typing {
         from {
@@ -288,19 +343,18 @@
       bookContainer {
         border:
           3px solid orange;
-		  box-shadow: 0 0 10px #ff0000;
+        box-shadow: 0 0 10px #ff0000;
         margin:
           auto;
         align-content: center;
         display: block;
-
       }
 
       bookContainer img {
         width: 60%;
         height: 60%;
-        position:relative;
-		z-index: 1000;
+        position: relative;
+        z-index: 1000;
       }
 
       .book {
@@ -308,31 +362,34 @@
       }
 
       .bookBox {
-  width: 30px;
-  height: 165px;
-  border: solid orange 2px;
-  display:inline-block;
-  margin-bottom: -5px;
- 
+        width: 30px;
+        height: 165px;
+        border: solid orange 2px;
+        display: inline-block;
+        margin-bottom: -5px;
+      }
 
-}
-
-.bookBox p{
-  font-size: 25px;
-  margin-bottom: 0px;
+      .bookBox p {
+        font-size: 25px;
+        margin-bottom: 0px;
         text-orientation: upright;
         writing-mode: sideways-lr;
         color: orange;
-        margin-left:0px;
+        margin-left: 0px;
         font-size: 1rem;
-  text-align: center;
-  height: 160px;
-  width: 30px;
-  margin-top: 0px;
+        text-align: center;
+        height: 160px;
+        width: 30px;
+        margin-top: 0px;
+      }
 
-}
+      
     </style>
   <body style="background-color: #000000;">
+    
+
+  
+    
     <script src="scripts_neocitiesedit/listeningto.js" defer></script>
     <script src="scripts_neocitiesedit/album.js"></script>
     <script src="scripts_neocitiesedit/hoverover.js"></script>
@@ -343,14 +400,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="scripts_neocitiesedit/tooltip-jquary.js"></script>
     <script src="scripts_neocitiesedit/tooltip.js"></script>
-    <script src="scripts_neocitiesedit/time.js"></script> 
+    <script src="scripts_neocitiesedit/time.js"></script>
     <span class="deco" style="position: absolute; margin-top: -32px;">
       <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
     </span>
+    <div class = "container">
     <div id="wrapHeader" class="wrapHeader">
       <div class="mp3" style="color: orange; border-bottom: none; width: auto;">
         <a href="https://www.last.fm/user/soupie03">
-          <img class="myImg" id="myImg" src="mp3.png">
+          
+          <img class="myImg" id="myImg" title = "meow" src="mp3.png"/>
         </a>
         <span class="trackInfo">
           <p id="TrackName"></p>
@@ -394,11 +453,10 @@
     <div id="wrapBookAndPhotos">
       <div class=book>
         <bookContainer>
-          <span title="coworker described it as 'russian family matters'. "  class = "bookBox">
-            <p style = "font-size: 2rem;">Anna Karenina </p>
+          <span title="coworker described it as 'russian family matters'. " class="bookBox">
+            <p style="font-size: 2rem;">Anna Karenina </p>
           </span>
-
-          <span class = "bookBox" title="i wanted to resonate a lot more with this book than i do. its very fun - lavery's setup is personal essays dispersed with (fanfiction?) of classical tragedies. I am just not the intendent audience.">
+          <span class="bookBox" title="i wanted to resonate a lot more with this book than i do. its very fun - lavery's setup is personal essays dispersed with (fanfiction?) of classical tragedies. I am just not the intendent audience.">
             <p> Something that may shock or discredit you</p>
           </span>
         </bookContainer>
@@ -406,6 +464,14 @@
       <div id=photos> photos </div>
       <div style="border-top: none; background-color: rgb(0, 0, 0); "></div>
       <!-- spacer for updates-->
+    </div>
+    </div>
+    <div id = "wrapperSiteButtons" class = "wrapperSiteButtons">
+      <div><p>about me</p></div>
+      <div><p>sitemap</p></div>
+      <div><p>resources</p></div>
+      <div><p>contact</p></div>
+      <div><p>fun</p></div>
     </div>
   </body>
 </html>

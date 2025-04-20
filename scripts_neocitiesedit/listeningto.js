@@ -12,6 +12,8 @@ async function fetchRecentTrack() {
             
             document.getElementById("TrackName").innerHTML = 'Song: ' + trackName;
             document.getElementById("ArtistName").innerHTML = 'Artist: ' + artistName;
+            var toolTipText = "I'm listening to " + trackName + " by: " + artistName + "!";
+            document.getElementById('myImg').setAttribute("title", toolTipText);
         } else {
             document.getElementById("track-info").textContent = "No recent tracks found.";
         }
