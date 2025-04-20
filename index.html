@@ -21,11 +21,10 @@
         position: relative;
         margin: 2vw auto;
         display: grid;
-        b
         grid-template-areas:
-          "mp3 header siteupdate"
+          "mp3 header siteupdate kittyphotos"
           ". webrings .";
-        grid-template-columns: 170px 600px 200px;
+        grid-template-columns: 170px 600px 200px 100PX;
         grid-template-rows: 100px 100px;
         background: black;
       }
@@ -73,6 +72,7 @@
         color: orange;
       }
 
+
       #wrapperSiteButtons div {
         border: 1px solid rgba(170, 113, 6, 0.521);
         background: black;
@@ -86,8 +86,27 @@
         border: 1px solid #ffa60034;
       }
 
-      @media screen and (max-width: 1040px) {
+      #kittyphotos{
+        margin-left: 50px;
+      }
 
+      #kittyphotos img{
+        margin-bottom: 20px;
+      }
+    
+
+      @media screen and (max-width: 1040px) {
+        #kittyphotos{
+        display: inline-block;
+        margin: auto;   
+           
+      }
+
+      #kittyphotos img{
+        width: 20vw;
+        margin-top: 4vw;   
+
+      }
         /* for mobile viewing*/
         #wrapHeader {
           width: auto;
@@ -98,12 +117,12 @@
             "mp3"
             "header"
             "siteupdate"
+            "kittyphotos"
             "webrings";
           grid-template-rows: auto;
           align-content: center;
           background: black;
         }
-
         #wrapBookAndPhotos {
           width: auto;
           display: grid;
@@ -195,6 +214,10 @@
         container-type: inline-size;
       }
 
+      .container{
+        
+      }
+
       @media only screen and (min-width: 1040px) {
 
         /* for editing update log background. */
@@ -236,8 +259,9 @@
 
       body {
         font-family: AcPlus_IBM_EGA_8x14;
-        background-image: url('bg.png');
-        background-blend-mode: screen;
+        
+        background: url("bg.png");;
+        background-blend-mode:lighten;  
         
          }
 
@@ -404,6 +428,10 @@
     <span class="deco" style="position: absolute; margin-top: -32px;">
       <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
     </span>
+    
+
+    
+   
     <div class = "container">
     <div id="wrapHeader" class="wrapHeader">
       <div class="mp3" style="color: orange; border-bottom: none; width: auto;">
@@ -439,6 +467,15 @@
           </span>
         </span>
       </div>
+      <div id = "kittyphotos">
+        <img src = "Gifs/country1.gif">
+     
+        <img src = "Gifs/country2.gif">
+      
+        <img src = "Gifs/country3.gif">
+      
+        <img src = "Gifs/country4.gif">
+      </div>
       <div style="border-right: none; border-top: none;"></div>
       <!--  spacer -->
       <div id="webrings">
@@ -473,5 +510,32 @@
       <div><p>contact</p></div>
       <div><p>fun</p></div>
     </div>
+
+  <div style="width: auto; display: grid; justify-content: space-between; color: white">
+
+      <pre style = "margin-left: -40px;">
+        |\_._/|        |,\__/|        |\__/,|        |\_._/|      
+        | o o |        |  o o|        |o o  |        | 0 0 |
+        (  T  )        (   T )        ( T   )        (  T  )
+       .^`-^-'^.      .^`--^'^.      .^`^--'^.      .^`-^-'^.
+       `.  ;  .'      `.  ;  .'      `.  ;  .'      `.  ;  .'
+       | | | | |      | | | | |      | | | | |      | | | | |
+      ((_((|))_))    ((_((|))_))    ((_((|))_))    ((_((|))_))
+      
+  </pre>
+
+  <pre>
+    |\_._/|        |\_._/|
+    |-o^o-|        |-@~@-|
+    (  T  )        (  T  )
+   .^`-^-'^.      .^`-^-'^.
+   `.  ;  .'      `.  ;  .'            |\__/,|   (`\
+   | | | | |      | | | | |          _.|o o  |_   ) )
+  ((_((|))_))    ((_((|))_))     ---(((---(((---------
+  </pre>
+  <a href = "https://user.xmission.com/~emailbox/catstuff.htm">from catstuff!</p></a>
+  
+    </div>
+    
   </body>
 </html>
