@@ -23,10 +23,11 @@
         display: grid;
         grid-template-areas:
           "mp3 header siteupdate kittyphotos"
-          ". webrings .";
-        grid-template-columns: 170px 600px 200px 100PX;
+          ". webrings . .";
+        grid-template-columns: 170px 606px 194px 100PX;
         grid-template-rows: 100px 100px;
         background: black;
+        box-shadow: 0rem .5rem 20rem orange;
       }
 
       #wrapBookAndPhotos {
@@ -41,10 +42,13 @@
        
         grid-template-areas:
           "book photos siteupdate";
-        grid-template-columns: 385px 385px 200px;
+        grid-template-columns: 388px 394px 194px;
         grid-template-rows: 220px;
         background: black;
+        z-index: 99;
       }
+
+      
 
       #wrapperSiteButtons{
         width: var(--viewfinderWidth);
@@ -55,11 +59,13 @@
         margin-bottom: 2vw;
         margin-left: auto;
         display: grid;
+        box-shadow: 0rem .5rem 10rem orange;
         
         grid-template-areas:
-          "about-me sitemap resources contact fun";
+          "about-me sitemap resources contact fun"
+          ". . kitty . .";
         grid-template-columns: 194px 194px 194px 194px 194px;
-        grid-template-rows: 50px;
+        grid-template-rows: 50px 130px;
         background: black;
       }
 
@@ -93,6 +99,20 @@
       #kittyphotos img{
         margin-bottom: 20px;
       }
+
+      .kittyFlexbox{
+       display: flex; 
+       flex-direction: row;
+       position:relative;
+       z-index: 999;
+      }
+
+      .kittyFlexbox pre{
+    display: inline-block;
+    margin-left:auto;
+    margin-right: auto;
+    color: white;
+}
     
 
       @media screen and (max-width: 1040px) {
@@ -101,6 +121,17 @@
         margin: auto;   
            
       }
+
+      .kittyFlexbox{
+       display: flex; 
+       flex-direction: column;
+      }
+
+      .kittyFlexbox pre{
+    
+    margin:auto;
+    font-size: 2.2vw;
+}
 
       #kittyphotos img{
         width: 20vw;
@@ -135,6 +166,7 @@
           grid-template-rows: auto;
           align-content: center;
           background: black;
+          z-index: 99;
         }
 
         #wrapperSiteButtons{
@@ -147,12 +179,14 @@
             "sitemap"
             "reasource"
             "contact"
-            "fun";
+            "fun"
+            "kitty";
           grid-template-rows: auto;
           align-content: center;
           background: black;
           grid-template-rows: auto;
       }
+
 
         .trackInfo {
           font-size: 10vw;
@@ -297,14 +331,10 @@
         scrollbar-width: none;
         color: orange;
         text-align: center;
-        animation: glow 5s ease-in-out infinite alternate;
+        text-shadow: 0 0 20px rgb(255, 115, 1);
       }
 
-      @-webkit-keyframes glow {
-        from {
-          text-shadow: 0 3px #df710a70, 0 0 30px #e63600b0, 0 0 40px #ff5100, 0 0 50px #522f06, 0 0 60px #e2e600, 0 0 70px #574f06;
-        }
-      }
+      
 
       .myImg {
         display: block;
@@ -320,7 +350,7 @@
 
       .title {
         color: #ffa500;
-        animation: glow 100s ease-in-out infinite alternate;
+        text-shadow: 0 0 20px rgb(255, 115, 1);
       }
 
       #s-m-t-tooltip {
@@ -431,7 +461,7 @@
     
 
     
-   
+    
     <div class = "container">
     <div id="wrapHeader" class="wrapHeader">
       <div class="mp3" style="color: orange; border-bottom: none; width: auto;">
@@ -499,7 +529,7 @@
         </bookContainer>
       </div>
       <div id=photos> photos </div>
-      <div style="border-top: none; background-color: rgb(0, 0, 0); "></div>
+      <div style="border-top: none;"></div>
       <!-- spacer for updates-->
     </div>
     </div>
@@ -509,33 +539,38 @@
       <div><p>resources</p></div>
       <div><p>contact</p></div>
       <div><p>fun</p></div>
-    </div>
+      <div><span class = "kittyFlexbox">
+        <pre>
+          |\_._/|        |,\__/|        |\__/,|        |\_._/|      
+          | o o |        |  o o|        |o o  |        | 0 0 |
+          (  T  )        (   T )        ( T   )        (  T  )
+         .^`-^-'^.      .^`--^'^.      .^`^--'^.      .^`-^-'^.
+         `.  ;  .'      `.  ;  .'      `.  ;  .'      `.  ;  .'
+         | | | | |      | | | | |      | | | | |      | | | | |
+        ((_((|))_))    ((_((|))_))    ((_((|))_))    ((_((|))_))
+        
+    </pre>
+    
+    <pre>
+      |\_._/|        |\_._/|
+      |-o^o-|        |-@~@-|
+      (  T  )        (  T  )
+     .^`-^-'^.      .^`-^-'^.
+     `.  ;  .'      `.  ;  .'            |\__/,|   (`\
+     | | | | |      | | | | |          _.|o o  |_   ) )
+    ((_((|))_))    ((_((|))_))     ---(((---(((---------
+    </pre>
+    </span></div>
+      <div></div>
+      <div>
+        
+      </div>
+      <div></div>
+      <div></div>
+   </div>
 
-  <div style="width: auto; display: grid; justify-content: space-between; color: white">
-
-      <pre style = "margin-left: -40px;">
-        |\_._/|        |,\__/|        |\__/,|        |\_._/|      
-        | o o |        |  o o|        |o o  |        | 0 0 |
-        (  T  )        (   T )        ( T   )        (  T  )
-       .^`-^-'^.      .^`--^'^.      .^`^--'^.      .^`-^-'^.
-       `.  ;  .'      `.  ;  .'      `.  ;  .'      `.  ;  .'
-       | | | | |      | | | | |      | | | | |      | | | | |
-      ((_((|))_))    ((_((|))_))    ((_((|))_))    ((_((|))_))
-      
-  </pre>
-
-  <pre>
-    |\_._/|        |\_._/|
-    |-o^o-|        |-@~@-|
-    (  T  )        (  T  )
-   .^`-^-'^.      .^`-^-'^.
-   `.  ;  .'      `.  ;  .'            |\__/,|   (`\
-   | | | | |      | | | | |          _.|o o  |_   ) )
-  ((_((|))_))    ((_((|))_))     ---(((---(((---------
-  </pre>
-  <a href = "https://user.xmission.com/~emailbox/catstuff.htm">from catstuff!</p></a>
-  
-    </div>
+   <!-- 
+   -->
     
   </body>
 </html>
