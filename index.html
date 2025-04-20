@@ -248,11 +248,13 @@
 	  #s-m-t-tooltip {
         /* template from doqmeat. - edited by me -w-*/
         border-radius: 10px;
-        border: 3px solid black;
+        border: 3px solid rgb(255, 255, 255);
+        box-shadow: 0 0 10px orange;
         background-color: rgb(32, 29, 29);
         max-width: 200px;
         font-family: AcPlus_IBM_EGA_8x14;
         color: rgb(255, 255, 255);
+        text-shadow: 0 0 20px #ff7301;
         font-size: 16px;
         text-align: left;
         padding: 5px;
@@ -283,7 +285,7 @@
         }
       }
 
-      photoContainer {
+      bookContainer {
         border:
           3px solid orange;
 		  box-shadow: 0 0 10px #ff0000;
@@ -294,7 +296,7 @@
 
       }
 
-      photoContainer img {
+      bookContainer img {
         width: 60%;
         height: 60%;
         position:relative;
@@ -304,9 +306,34 @@
       .book {
         align-content: center;
       }
+
+      .bookBox {
+  width: 30px;
+  height: 165px;
+  border: solid orange 2px;
+  display:inline-block;
+  margin-bottom: -5px;
+ 
+
+}
+
+.bookBox p{
+  font-size: 25px;
+  margin-bottom: 0px;
+        text-orientation: upright;
+        writing-mode: sideways-lr;
+        color: orange;
+        margin-left:0px;
+        font-size: 1rem;
+  text-align: center;
+  height: 160px;
+  width: 30px;
+  margin-top: 0px;
+
+}
     </style>
   <body style="background-color: #000000;">
-    <!-- <script src="scripts/listeningto.js" defer></script>
+    <script src="scripts/listeningto.js" defer></script>
     <script src="scripts/album.js"></script>
     <script src="scripts/hoverover.js"></script>
     <script src="scripts/githubCommit.js"></script>
@@ -316,7 +343,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="scripts/tooltip-jquary.js"></script>
     <script src="scripts/tooltip.js"></script>
-    <script src="scripts/time.js"></script> -->
+    <script src="scripts/time.js"></script> 
     <span class="deco" style="position: absolute; margin-top: -32px;">
       <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
     </span>
@@ -366,11 +393,15 @@
     </div>
     <div id="wrapBookAndPhotos">
       <div class=book>
-        <photocontainer>
-                    <img title="coworker described it as 'russian family matters'. " style="z-index: 0; height: 160px; width: 30px;" src="book spines/annakareninspine.png" alt="logo">              </td>
-          <img title="i wanted to resonate a lot more with this book than i do. its very fun - lavery's setup is personal essays dispersed with (fanfiction?) of classical tragedies.          I am just not the intendent audience. " style="z-index: 0; height: 160px; width: 20px;" src="book spines/shockandconfuseyou.png" alt="logo">              </td>
+        <bookContainer>
+          <span title="coworker described it as 'russian family matters'. "  class = "bookBox">
+            <p style = "font-size: 2rem;">Anna Karenina </p>
+          </span>
 
-        </photocontainer>
+          <span class = "bookBox" title="i wanted to resonate a lot more with this book than i do. its very fun - lavery's setup is personal essays dispersed with (fanfiction?) of classical tragedies. I am just not the intendent audience.">
+            <p> Something that may shock or discredit you</p>
+          </span>
+        </bookContainer>
       </div>
       <div id=photos> photos </div>
       <div style="border-top: none; background-color: rgb(0, 0, 0); "></div>
