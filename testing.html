@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Document Template</title>
+    <style>
+      clock{
+        border:
+          3px solid rgb(255, 255, 255);
+        box-shadow: 0 0 10px #ff0000;
+        margin:
+          auto;
+        align-content: center;
+        display: block;
+        background: black;
+        color:rgb(255, 255, 255);
+        width: 80px;
+        height:20px;
+        font-family: AcPlus_IBM_EGA_8x14;
+        text-align: center;
+      }
+
+      @font-face {
+        font-family: 'AcPlus_IBM_EGA_8x14';
+        /*a name to be used later*/
+        src: url('fonts/AcPlus_IBM_EGA_8x14.ttf');
+        /*URL to font*/
+      }
+    </style>
+  </head>
+
+  <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+
+  <body onload="startTime()">
+    
+    <clock class = "deco">
+        <div id="txt"></div>
+    </clock>
+    
+  </body>
+</html>

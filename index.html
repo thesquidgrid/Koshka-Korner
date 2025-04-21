@@ -291,6 +291,22 @@
         /*URL to font*/
       }
 
+      clock{
+        border:
+          3px solid rgb(255, 255, 255);
+        box-shadow: 0 0 10px #ff0000;
+        margin:
+          auto;
+        align-content: center;
+        display: block;
+        background: black;
+        color:rgb(255, 255, 255);
+        width: 80px;
+        height:20px;
+        font-family: AcPlus_IBM_EGA_8x14;
+        text-align: center;
+      }
+
       body {
         font-family: AcPlus_IBM_EGA_8x14;
         
@@ -317,6 +333,7 @@
 
       .trackInfo {
         text-align: center;
+        line-height: .2;
       }
 
       .siteupdate {
@@ -404,13 +421,6 @@
         display: block;
       }
 
-      bookContainer img {
-        width: 60%;
-        height: 60%;
-        position: relative;
-        z-index: 1000;
-      }
-
       .book {
         align-content: center;
       }
@@ -455,25 +465,22 @@
 
       
     </style>
-  <body style="background-color: #000000;">
+  <body style="background-color: #000000;" onload="startTime()">
     
 
   
     
     <script src="scripts_neocitiesedit/listeningto.js" defer></script>
     <script src="scripts_neocitiesedit/album.js"></script>
-    <script src="scripts_neocitiesedit/hoverover.js"></script>
     <script src="scripts_neocitiesedit/githubCommit.js"></script>
     <script src="scripts_neocitiesedit/siteUpdateLog.js"></script>
-    <script src="scripts_neocitiesedit/mostRecentPhoto.js"></script>
     <script src="scripts_neocitiesedit/draggable.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="scripts_neocitiesedit/tooltip-jquary.js"></script>
     <script src="scripts_neocitiesedit/tooltip.js"></script>
-    <script src="scripts_neocitiesedit/time.js"></script>
-    <span class="deco" style="position: absolute; margin-top: -32px;">
-      <iframe frameborder="no" framespacing="0" src="clock.html" allowtransparency="true" style="background-color: transparent;" width="90" height="103" scrolling="no"></iframe>
-    </span>
+    <script src="scripts_neocitiesedit/clock.js"></script>
+
+    
     
 
     
@@ -488,6 +495,9 @@
         <span class="trackInfo">
           <p id="TrackName"></p>
           <p id="ArtistName"></p>
+          <clock class = "deco">
+            <div id="txt"></div>
+        </clock>
         </span>
       </div>
       <div class="header" id="header">
