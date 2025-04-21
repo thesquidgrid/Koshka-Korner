@@ -79,10 +79,14 @@
       }
 
 
-      #wrapperSiteButtons div {
+      #wrapperSiteButtons div:nth-child(-n+5) {
         border: 1px solid rgba(170, 113, 6, 0.521);
+      }
+
+      .wrapperSiteButtons div{
         background: black;
       }
+      
 
       #wrapHeader div {
         border: 1px solid #ffa60034;
@@ -248,9 +252,7 @@
         container-type: inline-size;
       }
 
-      .container{
-        
-      }
+     
 
       @media only screen and (min-width: 1040px) {
 
@@ -487,7 +489,7 @@
     
     <div class = "container">
     <div id="wrapHeader" class="wrapHeader">
-      <div class="mp3" style="color: orange; border-bottom: none; width: auto;">
+      <div id = "mp3" class="mp3" style="color: orange; border-bottom: none; width: auto;">
         <a href="https://www.last.fm/user/soupie03">
           
           <img class="myImg" id="myImg" title = "meow" src="mp3.png"/>
@@ -565,7 +567,8 @@
       <div><p>resources</p></div>
       <div><p>contact</p></div>
       <div><p>fun</p></div>
-      <div><span class = "kittyFlexbox">
+      
+      <div><span class = "kittyFlexbox" >
         <pre>
           |\_._/|        |,\__/|        |\__/,|        |\_._/|      
           | o o |        |  o o|        |o o  |        | 0 0 |
