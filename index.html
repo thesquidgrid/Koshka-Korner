@@ -15,6 +15,7 @@
         --viewfinderWidth: 60rem;
       }
 
+
       #wrapHeader {
         width: var(--viewfinderWidth);
         height: auto;
@@ -27,7 +28,7 @@
         grid-template-columns: 170px 606px 194px 100PX;
         grid-template-rows: 100px 100px;
         background: black;
-        box-shadow: 0rem .5rem 20rem orange;
+        box-shadow: 0rem .5rem 20rem rgba(255, 166, 0, 0.336);
       }
 
       #wrapBookAndPhotos {
@@ -59,7 +60,7 @@
         margin-bottom: 2vw;
         margin-left: auto;
         display: grid;
-        box-shadow: 0rem .5rem 10rem orange;
+        box-shadow: 0rem .5rem 5rem rgba(255, 166, 0, 0.411);
         
         grid-template-areas:
           "about-me sitemap resources contact fun"
@@ -86,6 +87,23 @@
       .wrapperSiteButtons div{
         background: black;
       }
+
+      #blinkcontainer{
+        height: 200px;
+        width: 100px;
+        position: absolute;
+        display: block;
+        margin-left: 120px;
+        margin-top: -20px;
+      }
+
+
+#blinkcontainer img
+    {
+    padding: 0;
+    padding-top: 10px;
+    display: block;
+    }
       
 
       #wrapHeader div {
@@ -112,11 +130,11 @@
       }
 
       .kittyFlexbox pre{
-    display: inline-block;
-    margin-left:auto;
-    margin-right: auto;
-    color: white;
-}
+       display: inline-block;
+       margin-left:auto;
+       margin-right: auto;
+       color: white;
+      }
     
 
       @media screen and (max-width: 1040px) {
@@ -137,10 +155,10 @@
     font-size: 2.2vw;
 }
 
-      #kittyphotos img{
-        width: 20vw;
-        margin-top: 4vw;   
-
+.kittyphotos img{
+        margin-top: 4vw;
+        width: auto;
+        height: 24vw;
       }
         /* for mobile viewing*/
         #wrapHeader {
@@ -307,6 +325,7 @@
         height:20px;
         font-family: AcPlus_IBM_EGA_8x14;
         text-align: center;
+        margin-top: 6px;
       }
 
       body {
@@ -335,7 +354,12 @@
 
       .trackInfo {
         text-align: center;
-        line-height: .2;
+        line-height: 1;
+      }
+
+      .trackInfo p{
+        margin-top: 0;
+        margin-bottom: 0;
       }
 
       .siteupdate {
@@ -416,7 +440,7 @@
       bookContainer {
         border:
           3px solid orange;
-        box-shadow: 0 0 10px #ff0000;
+        box-shadow: 0 0 5px #ff0000;
         margin:
           auto;
         align-content: center;
@@ -483,7 +507,11 @@
     <script src="scripts_neocitiesedit/clock.js"></script>
 
     
-    
+    <div id = "blinkcontainer" class = "deco">
+      <img src = "kittyphoto/gr_fai17.gif">
+      <img src = "kittyphoto/gr_fai46.gif">
+      <img src = "kittyphoto/blink38.gif">
+    </div>
 
     
     
@@ -525,8 +553,10 @@
           </span>
         </span>
       </div>
-      <div id = "kittyphotos">
-        <img src = "Gifs/country1.gif">
+      <div id = "kittyphotos" class = "kittyphotos">
+        <a href = "https://user.xmission.com/~emailbox/graphics.htm">
+          <img title = "from catstuff!" src = "Gifs/country1.gif">
+        </a>
      
         <img src = "Gifs/country2.gif">
       
@@ -540,6 +570,7 @@
         <span class="noaiwebring">
           <a href="https://baccyflap.com/noai/?prv&s=kot" target="_top">« prev</a> | <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
           <a style="font-size:100%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> | <a href="https://baccyflap.com/noai/?nxt&s=kot" target="_top">next »</a>
+          
       </div>
       </span>
       <div style="border-top: none; border-bottom: none; background-color: rgb(0, 0, 0);"></div>
