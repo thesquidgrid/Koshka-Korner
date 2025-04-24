@@ -46,7 +46,6 @@
         grid-template-columns: 388px 394px 194px;
         grid-template-rows: 220px;
         background: black;
-        z-index: 99;
       }
 
       
@@ -68,6 +67,7 @@
         grid-template-columns: 194px 194px 194px 194px 194px;
         grid-template-rows: 50px 130px;
         background: black;
+        
       }
 
       .wrapperSiteButtons p {
@@ -505,10 +505,14 @@
     <script src="scripts_neocitiesedit/tooltip-jquary.js"></script>
     <script src="scripts_neocitiesedit/tooltip.js"></script>
     <script src="scripts_neocitiesedit/clock.js"></script>
+    <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+    <script src="scripts_neocitiesedit/buttonShadow.js"></script>
 
     
     <div id = "blinkcontainer" class = "deco">
-      <img src = "kittyphoto/gr_fai17.gif">
+      <a href = "http://diabellalovescats.com/">
+        <img title = "from dibella loves cats!" src = "kittyphoto/gr_fai17.gif">
+      </a>
       <img src = "kittyphoto/gr_fai46.gif">
       <img src = "kittyphoto/blink38.gif">
     </div>
@@ -520,7 +524,7 @@
       <div id = "mp3" class="mp3" style="color: orange; border-bottom: none; width: auto;">
         <a href="https://www.last.fm/user/soupie03">
           
-          <img class="myImg" id="myImg" title = "meow" src="mp3.png"/>
+          <img class="myImg" id="myImg" title = "meow" src="albumplaceholder.jpg"/>
         </a>
         <span class="trackInfo">
           <p id="TrackName"></p>
@@ -593,11 +597,11 @@
     </div>
     </div>
     <div id = "wrapperSiteButtons" class = "wrapperSiteButtons">
-      <div><p>about me</p></div>
-      <div><p>sitemap</p></div>
-      <div><p>resources</p></div>
-      <div><p>contact</p></div>
-      <div><p>fun</p></div>
+      <div id = "button" onclick="buttonShadow(this)"><p>about me</p></div>
+      <div id = "button" onclick="buttonShadow(this)"><p>sitemap</p></div>
+      <div id = "button" onclick="buttonShadow(this)"><p>resources</p></div>
+      <div id = "button" onclick="buttonShadow(this)"><p>contact</p></div>
+      <div id = "button" onclick="buttonShadow(this)"><p>fun</p></div>
       
       <div><span class = "kittyFlexbox" >
         <pre>
