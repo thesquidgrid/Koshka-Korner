@@ -29,52 +29,56 @@
       .kitty-photos1,
       #kittyphotos2 {
         border: none;
+        background-color: none;
       }
-
-      
 
       .mp3 {
         grid-area: mp3;
-      }
-
-      .header {
-        grid-area: header;
-      }
-
-      .siteupdate {
-        grid-area: siteupdate;
-      }
-
-      .kitty-photos2 {
-        grid-area: kitty-photos2;
-        border: none;
-      }
-
-      #kittyphotos2 img {
-        width: 100px;
-        margin-left: 50px;
-        margin-bottom: 20px;
-      }
-
-      .webrings {
-        grid-area: webrings;
-      }
-
-      /*end of divs!*/
-      #wrapHeader div {
+        display: block;
         border: 1px solid orange;
+        background-color: black;
       }
 
       .mp3img img {
         height: 199px;
         width: 169px;
         z-index: 999;
+        border: 1px solid orange;
+        background-color: black;
       }
 
-      .mp3 {
-        display: block;
+      .header {
+        grid-area: header;
+        border: 1px solid orange;
+        background-color: black;
       }
 
+      .siteupdate {
+        grid-area: siteupdate;
+        border: 1px solid orange;
+        background-color: black;
+      }
+
+      .kitty-photos2 {
+        grid-area: kitty-photos2;
+        border: none;
+        border: 1px solid orange;
+      }
+
+      #kittyphotos2 img {
+        width: 100px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        border: 1px solid orange;
+      }
+
+      .webrings {
+        grid-area: webrings;
+        border: 1px solid orange;
+        background-color: black;
+      }
+
+      /*end of divs!*/
       @font-face {
         font-family: 'AcPlus_IBM_EGA_8x14';
         /*a name to be used later*/
@@ -94,15 +98,12 @@
         display: flex;
         justify-content: center;
         z-index: 999;
-        border-bottom: none;
         min-height: 419px;
         scrollbar-width: none;
         color: orange;
         text-align: center;
         text-shadow: 0 0 20px rgb(255, 115, 1);
       }
-
-      
 
       .mp3img img {
         height: 199px;
@@ -146,6 +147,9 @@
       .trackInfo {
         text-align: center;
         line-height: 1;
+        z-index: 999;
+        position: relative;
+        overflow: scroll;
       }
 
       .trackInfo p {
@@ -173,25 +177,40 @@
         }
 
         .kitty-photos1 {
+          border: 1px solid orange;
           text-align: center;
         }
-        
+
         .kitty-photos1 img {
           height: 120px;
           width: 100px;
-          display:inline-block;
-          
+          display: inline-block;
         }
 
-        .mp3 {}
+        .mp3 {
+          border-top: none;
+          border: 1px solid orange;
+        }
 
-        .header {}
+        .mp3 img {
+          height: 200px;
+        }
 
-        .siteupdate {}
+        .header {
+          border: 1px solid orange;
+        }
 
-        .kitty-photos2 {}
+        .siteupdate {
+          border: 1px solid orange;
+        }
 
-        .webrings {}
+        .kitty-photos2 {
+          border: 1px solid orange;
+        }
+
+        .webrings {
+          border: 1px solid orange;
+        }
       }
 
       /*  COMPUTER VIEWING: */
@@ -201,11 +220,12 @@
         }
 
         #kittyphotos1 img {
-        width: 150px;
-        margin-left: -50px;
+          width: 150px;
+          margin-left: -30px;
+        }
       }
 
-      }
+      /* CLOCK */
       clock {
         border:
           3px solid rgb(255, 255, 255);
@@ -222,6 +242,55 @@
         text-align: center;
         margin-top: 6px;
       }
+
+      /* title styling and animation*/
+      .title {
+        color: #ffa500;
+        text-shadow: 0 0 20px rgb(255, 115, 1);
+      }
+
+      .header p {
+        white-space: nowrap;
+        font-size: 7.4rem;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        overflow:
+          hidden;
+        border-right:
+          .15em solid orange;
+        margin: .5 auto;
+        text-shadow: 0 0 20px rgb(255, 115, 1);
+        animation:
+          typing 3.5s steps(30, end), blink-caret .65s step-end 8;
+        border-right:
+          .15em solid transparent;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0
+        }
+
+        to {
+          width: 100%
+        }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+
+        from,
+        to {
+          border-color: transparent
+        }
+
+        50% {
+          border-color: orange;
+        }
+      }
+
+      /* END OF STYLING FOR TITLE*/
     </style>
   <body style="display: flex; justify-content: center;" onload="startTime()">
     <script src="scripts_neocitiesedit/listeningto.js" defer></script>
@@ -234,7 +303,7 @@
     <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
     <script src="scripts_neocitiesedit/buttonShadow.js"></script>
     <div id="wrapHeader">
-      <div id="kittyphotos1" class="kitty-photos1" style="border:none">
+      <div id="kittyphotos1" class="kitty-photos1">
         <a href="http://diabellalovescats.com/">
           <img title="from dibella loves cats!" src="kittyphoto/gr_fai17.gif">
         </a>
@@ -254,9 +323,7 @@
         </span>
       </div>
       <div class="header">
-        <div class="header" id="header">
-          <p class="title">Koshka-Korner</p>
-        </div>
+        <p class="title">Koshka-Korner</p>
       </div>
       <div class="siteupdate"></div>
       <div class="kittyphotos" id="kittyphotos2" style="border: none">
@@ -267,6 +334,9 @@
         <img src="Gifs/country3.gif">
         <img src="Gifs/country4.gif">
       </div>
+      <div></div>
+      <!-- spacer-->
+      <div style="background-color: black; border-left: 1px orange solid; border-bottom: 1px orange solid "></div>
       <div class="webrings"></div>
     </div>
     <!-- 
