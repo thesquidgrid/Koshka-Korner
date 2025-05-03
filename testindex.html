@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- based on code by des from doqmeat! thanks for making your source code open :) -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        box-sizing: border-box;
+        list-style-position: inside;
+      }
+
+      :root {
+        --fonts: gaegu-r, ms pgothic, arial;
+        --viewfinderWidth: 60rem;
+      }
+
+      #wrapHeader {
+        display: grid;
+        grid-template-columns: 150px 170px 600px 190px 150px;
+        grid-template-rows: 100px 100px;
+        gap: 0px 0px;
+        grid-template-areas:
+          "kitty-photos1 mp3 header siteupdate kitty-photos2"
+          ". . webrings . .";
+      }
+
+      /* ROWS AND COLUMNS WHILE IN COMPUTER DISPLAY MODE: !*/
+      .kitty-photos1,
+      #kittyphotos2 {
+        border: none;
+      }
+
+      
+
+      .mp3 {
+        grid-area: mp3;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .siteupdate {
+        grid-area: siteupdate;
+      }
+
+      .kitty-photos2 {
+        grid-area: kitty-photos2;
+        border: none;
+      }
+
+      #kittyphotos2 img {
+        width: 100px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+      }
+
+      .webrings {
+        grid-area: webrings;
+      }
+
+      /*end of divs!*/
+      #wrapHeader div {
+        border: 1px solid orange;
+      }
+
+      .mp3img img {
+        height: 199px;
+        width: 169px;
+        z-index: 999;
+      }
+
+      .mp3 {
+        display: block;
+      }
+
+      @font-face {
+        font-family: 'AcPlus_IBM_EGA_8x14';
+        /*a name to be used later*/
+        src: url('fonts/AcPlus_IBM_EGA_8x14.ttf');
+        /*URL to font*/
+      }
+
+      body {
+        font-family: AcPlus_IBM_EGA_8x14;
+        background: url("bg.png");
+      }
+
+      .siteupdate {
+        overflow: scroll;
+        text-align: center;
+        line-height: 20px;
+        display: flex;
+        justify-content: center;
+        z-index: 999;
+        border-bottom: none;
+        min-height: 419px;
+        scrollbar-width: none;
+        color: orange;
+        text-align: center;
+        text-shadow: 0 0 20px rgb(255, 115, 1);
+      }
+
+      
+
+      .mp3img img {
+        height: 199px;
+        width: 169px;
+        z-index: 999;
+      }
+
+      .mp3 {
+        display: block;
+      }
+
+      .myImg {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+      }
+
+      .myImg:hover {
+        color: #111;
+        background: orange;
+        box-shadow: 0px 0px 1rem orange;
+      }
+
+      #s-m-t-tooltip {
+        /* template from doqmeat. - edited by me -w-*/
+        border-radius: 10px;
+        border: 3px solid rgb(255, 255, 255);
+        box-shadow: 0 0 10px orange;
+        background-color: rgb(32, 29, 29);
+        max-width: 200px;
+        font-family: AcPlus_IBM_EGA_8x14;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 20px #ff7301;
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        z-index: 9999;
+        margin: 10px;
+      }
+
+      .trackInfo {
+        text-align: center;
+        line-height: 1;
+      }
+
+      .trackInfo p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      /*  PHONE VIEWING: */
+      @media screen and (max-width: 1040px) {
+        #wrapHeader {
+          width: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          /* single column */
+          grid-template-areas:
+            "kitty-photos1"
+            "mp3"
+            "header"
+            "siteupdate"
+            "kitty-photos2"
+            "webrings";
+          grid-template-rows: auto;
+          align-content: center;
+          background: black;
+        }
+
+        .kitty-photos1 {
+          text-align: center;
+        }
+        
+        .kitty-photos1 img {
+          height: 120px;
+          width: 100px;
+          display:inline-block;
+          
+        }
+
+        .mp3 {}
+
+        .header {}
+
+        .siteupdate {}
+
+        .kitty-photos2 {}
+
+        .webrings {}
+      }
+
+      /*  COMPUTER VIEWING: */
+      @media only screen and (min-width: 1040px) {
+        .myImg {
+          height: 100px;
+        }
+
+        #kittyphotos1 img {
+        width: 150px;
+        margin-left: -50px;
+      }
+
+      }
+      clock {
+        border:
+          3px solid rgb(255, 255, 255);
+        box-shadow: 0 0 10px #ff0000;
+        margin:
+          auto;
+        align-content: center;
+        display: block;
+        background: black;
+        color: rgb(255, 255, 255);
+        width: 80px;
+        height: 20px;
+        font-family: AcPlus_IBM_EGA_8x14;
+        text-align: center;
+        margin-top: 6px;
+      }
+    </style>
+  <body style="display: flex; justify-content: center;" onload="startTime()">
+    <script src="scripts_neocitiesedit/listeningto.js" defer></script>
+    <script src="scripts_neocitiesedit/album.js"></script>
+    <!-- <script src="scripts_neocitiesedit/githubCommit.js"></script><script src="scripts_neocitiesedit/siteUpdateLog.js"></script><script src="scripts_neocitiesedit/draggable.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="scripts_neocitiesedit/tooltip-jquary.js"></script>
+    <script src="scripts_neocitiesedit/tooltip.js"></script>
+    <script src="scripts_neocitiesedit/clock.js"></script>
+    <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+    <script src="scripts_neocitiesedit/buttonShadow.js"></script>
+    <div id="wrapHeader">
+      <div id="kittyphotos1" class="kitty-photos1" style="border:none">
+        <a href="http://diabellalovescats.com/">
+          <img title="from dibella loves cats!" src="kittyphoto/gr_fai17.gif">
+        </a>
+        <img src="kittyphoto/gr_fai46.gif">
+        <img src="kittyphoto/blink38.gif">
+      </div>
+      <div class="mp3" id="mp3" style="color: orange; border-bottom: none; width: auto;">
+        <a href="https://www.last.fm/user/soupie03">
+          <img class="myImg" id="myImg" title="meow" src="albumplaceholder.jpg" />
+        </a>
+        <span class="trackInfo">
+          <p id="TrackName"></p>
+          <p id="ArtistName"></p>
+          <clock class="deco">
+            <div id="txt"></div>
+          </clock>
+        </span>
+      </div>
+      <div class="header">
+        <div class="header" id="header">
+          <p class="title">Koshka-Korner</p>
+        </div>
+      </div>
+      <div class="siteupdate"></div>
+      <div class="kittyphotos" id="kittyphotos2" style="border: none">
+        <a href="https://user.xmission.com/~emailbox/graphics.htm">
+          <img title="from catstuff!" src="Gifs/country1.gif">
+        </a>
+        <img src="Gifs/country2.gif">
+        <img src="Gifs/country3.gif">
+        <img src="Gifs/country4.gif">
+      </div>
+      <div class="webrings"></div>
+    </div>
+    <!-- 
+   -->
+  </body>
+</html>
