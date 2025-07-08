@@ -22,7 +22,8 @@
         gap: 0px 0px;
         grid-template-areas:
           "kitty-photos1 mp3 header siteupdate kitty-photos2"
-          ". . webrings . .";
+          ". . webrings . ."
+          ". books photos . .";
       }
 
       /* ROWS AND COLUMNS WHILE IN COMPUTER DISPLAY MODE: !*/
@@ -76,6 +77,18 @@
 
       .webrings {
         grid-area: webrings;
+        border: 1px solid orange;
+        background-color: black;
+      }
+
+      .books {
+        grid-area: books;
+        border: 1px solid orange;
+        background-color: black;
+      }
+
+      .photos {
+        grid-area: photos;
         border: 1px solid orange;
         background-color: black;
       }
@@ -191,7 +204,9 @@
             "header"
             "siteupdate"
             "kitty-photos2"
-            "webrings";
+            "webrings"
+            "books"
+            "photos";
           grid-template-rows: auto;
           align-content: center;
           background: black;
@@ -393,6 +408,11 @@
           <a href="https://baccyflap.com/noai/?prv&s=kot" target="_top">« prev</a> | <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
           <a style="font-size:100%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> | <a href="https://baccyflap.com/noai/?nxt&s=kot" target="_top">next »</a>
       </div>
+      <div></div>
+      <div class = "books"></div>
+      <div class = "photos"></div>
+      <div></div>
+      <div></div>
     </div>
     <!-- 
    -->
