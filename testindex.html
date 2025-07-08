@@ -18,7 +18,7 @@
       #wrapHeader {
         display: grid;
         grid-template-columns: 150px 170px 600px 190px 150px;
-        grid-template-rows: 100px 100px;
+        grid-template-rows: 110px 100px;
         gap: 0px 0px;
         grid-template-areas:
           "kitty-photos1 mp3 header siteupdate kitty-photos2"
@@ -59,6 +59,8 @@
         background-color: black;
       }
 
+      
+
       .kitty-photos2 {
         grid-area: kitty-photos2;
         border: none;
@@ -77,6 +79,8 @@
         border: 1px solid orange;
         background-color: black;
       }
+
+
 
       /*end of divs!*/
       @font-face {
@@ -98,11 +102,12 @@
         display: flex;
         justify-content: center;
         z-index: 999;
-        min-height: 419px;
+        min-height: 420px;
         scrollbar-width: none;
         color: orange;
         text-align: center;
         text-shadow: 0 0 20px rgb(255, 115, 1);
+        font-size: 15px;
       }
 
       .mp3img img {
@@ -113,6 +118,22 @@
 
       .mp3 {
         display: block;
+      }
+
+      .noaiwebring {
+        text-align: center;
+        display: block;
+        margin: auto;
+        font-size: 2.2rem;
+      }
+
+      .noaiwebring a,
+      a:hover,
+      a:focus,
+      a:active {
+        text-decoration: none;
+        color: orange;
+        text-shadow: 0 0 20px rgb(255, 115, 1);
       }
 
       .myImg {
@@ -185,6 +206,8 @@
           height: 120px;
           width: 100px;
           display: inline-block;
+          margin-left: 40px;
+          margin-right: 40px;
         }
 
         .mp3 {
@@ -202,6 +225,13 @@
 
         .siteupdate {
           border: 1px solid orange;
+        }
+
+        .ghUpdateContainer {
+          background-color: rgb(0, 0, 0);
+          border: 1px solid;
+          font-size: 1.8rem;
+          line-height: 1.3rem;
         }
 
         .kitty-photos2 {
@@ -291,10 +321,13 @@
       }
 
       /* END OF STYLING FOR TITLE*/
+
+
     </style>
   <body style="display: flex; justify-content: center;" onload="startTime()">
     <script src="scripts_neocitiesedit/listeningto.js" defer></script>
     <script src="scripts_neocitiesedit/album.js"></script>
+    <script src="scripts_neocitiesedit/siteUpdateLog.js"></script>
     <!-- <script src="scripts_neocitiesedit/githubCommit.js"></script><script src="scripts_neocitiesedit/siteUpdateLog.js"></script><script src="scripts_neocitiesedit/draggable.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="scripts_neocitiesedit/tooltip-jquary.js"></script>
@@ -325,7 +358,25 @@
       <div class="header">
         <p class="title">Koshka-Korner</p>
       </div>
-      <div class="siteupdate"></div>
+      <div class="siteupdate">
+        <span class="ghUpdateContainer">
+          <h3> Update Log: </h3>
+          <span class="ghtext">
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+            <p id="date0"> loading...</p>
+            <p id="message0"> loading...</p>
+            <p class="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
+            <p id="date1"> loading...</p>
+            <p id="message1">loading...</p>
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+            <p id="date2">loading...</p>
+            <p id="message2">loading...</p>
+            <p class="ghTextOutline">✯¸.•´*¨`*•✿ ✿•*`¨*`•.¸✯</p>
+            <p id="date3">loading...</p>
+            <p id="message3">loading...</p>
+            <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
+          </span>
+      </div>
       <div class="kittyphotos" id="kittyphotos2" style="border: none">
         <a href="https://user.xmission.com/~emailbox/graphics.htm">
           <img title="from catstuff!" src="Gifs/country1.gif">
@@ -336,8 +387,12 @@
       </div>
       <div></div>
       <!-- spacer-->
-      <div style="background-color: black; border-left: 1px orange solid; border-bottom: 1px orange solid "></div>
-      <div class="webrings"></div>
+      <div style="z-index:0; background-color: black; border-left: 1px orange solid; border-bottom: 1px orange solid "></div>
+      <div class="webrings">
+        <span class="noaiwebring">
+          <a href="https://baccyflap.com/noai/?prv&s=kot" target="_top">« prev</a> | <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
+          <a style="font-size:100%" href="https://baccyflap.com/noai/?rnd" target="_top">(random)</a> | <a href="https://baccyflap.com/noai/?nxt&s=kot" target="_top">next »</a>
+      </div>
     </div>
     <!-- 
    -->
