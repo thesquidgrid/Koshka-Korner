@@ -23,12 +23,14 @@
     #wrapHeader {
       display: grid;
       grid-template-columns: 150px 170px 600px 190px 150px;
-      grid-template-rows: 110px 100px 220px;
+      grid-template-rows: 110px 100px 220px 50px 130px;
       gap: 0px 0px;
       grid-template-areas:
         "kitty-photos1 mp3 header siteupdate kitty-photos2"
         ". . webrings . ."
-        ". book photos . .";
+        ". book photos . ."
+        ". button1 button2 button3 ."
+          ". . kitty . .";
     }
 
     .mp3 {
@@ -81,6 +83,26 @@
 
     .photos {
       grid-area: photos;
+    }
+
+    .button1 {
+      grid-area: button1;
+      background-color: black;
+      z-index: 999;
+      
+    }
+
+    .button2 {
+      grid-area: button2;
+      border-bottom: 1px solid orange;
+      background-color: black;
+    }
+    
+    .button3 {
+      grid-area: button3;
+      border-bottom: 1px solid orange;
+      border-right: 1px solid orange;
+      background-color: black;
     }
 
     /*end of divs!*/
@@ -178,6 +200,22 @@
       margin-bottom: 0;
     }
 
+    .button { 
+     border: 1px solid orange;
+     position:relative;
+     z-index: 1000;
+     color: orange;
+     text-align: center;
+     display:inline-block;
+     height: 50px;
+     justify-content: center;
+
+    }
+   
+    .buttonText {
+      margin-top: 10px;
+    }
+
     /*  PHONE VIEWING: */
     @media screen and (max-width: 1040px) {
       #wrapHeader {
@@ -193,7 +231,10 @@
           "book"
           "kitty-photos1"
           "siteupdate"
-          "photos";
+          "photos"
+          "button1"
+          "button2"
+          "button3";
         grid-template-rows: auto;
         align-content: center;
         background: black;
@@ -275,6 +316,12 @@
       .deco {
         display: none;
       }
+
+      .button1 {
+      z-index: 999;
+      
+      max-width: 90vw;
+    }
     }
 
     /*  COMPUTER VIEWING: */
@@ -315,6 +362,13 @@
       .book {
         min-width: 400px;
       }
+      .button1 {
+      grid-area: button1;
+      background-color: black;
+      z-index: 999;
+      min-width: 960px;
+    }
+      
     }
 
     /* CLOCK */
@@ -552,15 +606,42 @@
         
       </bookcontainer>
     </div>
-    <div class="photos">
+    <div class="photos" style = "margin-left:230px; background-color: black; border-bottom: #ffa500 solid 1px;">
+      <p>
+        meowmeowmeowmeow
+      </p>
     </div>
     <div>
     </div>
     <div>
     </div>
+    <div></div>
+    <div class = "button1">
+
+      <div class="button">
+        This is a box!
+      </div>
+      <div class="button">
+        This is a box!
+      </div>
+      <div class="button">
+        This is a box!
+      </div>
+      <div class="button">
+        This is a box!
+      </div>
+      <div class="button">
+        This is a box!
+      </div>
+    </div>
+    <div class = "button2"></div>
+    <div class = "button3"></div>
   </div>
-  <!-- 
+  
+  <!-- new line
          -->
+  
+
 </body>
 
 </html>
