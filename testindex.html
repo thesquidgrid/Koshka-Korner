@@ -142,9 +142,7 @@
       }
 
       .myImg {
-        display: block;
-        margin: auto;
-        margin-top: 10px;
+        
       }
 
       .myImg:hover {
@@ -237,8 +235,17 @@
           border: 1px solid orange;
         }
 
-        .myImg{
-          width: 40vw
+        #TrackName{
+          margin-top: 2vw;
+
+        }
+        .trackInfo{
+          font-size: 7vw;
+        }
+
+        #myImg{
+          float: right;
+          border: 2px solid rgba(255, 166, 0, 0.466);
           height: 40vw;
         }
 
@@ -255,8 +262,7 @@
         }
 
         .ghUpdateContainer {
-          background-color: rgb(0, 0, 0);
-          border: 1px solid;
+          
           font-size: 1.8rem;
           line-height: 1.3rem;
         }
@@ -276,11 +282,18 @@
           display: none;
         }
       }
+    
 
       /*  COMPUTER VIEWING: */
       @media only screen and (min-width: 1040px) {
         .myImg {
           height: 100px;
+          display: block;
+          margin: auto;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          z-index: 999;
+          position: relative;
         }
 
         #kittyphotos1 img {
@@ -297,9 +310,13 @@
         background-color: none;
       }
 
-        .header{
-          font-size: 7.5rem;
-        }
+      .header{
+        font-size: 7.5rem;
+      }
+
+      .deco-comp {
+        display: none;
+      }
       
       }
 
@@ -396,6 +413,7 @@
         </a>
         <span class="trackInfo">
           <p id="TrackName"></p>
+          <hr class = "deco-comp" style="color: orange;"> </sr>
           <p id="ArtistName"></p>
           <clock class="deco">
             <div id="txt"></div>
