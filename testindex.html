@@ -26,12 +26,7 @@
           ". books photos . .";
       }
 
-      /* ROWS AND COLUMNS WHILE IN COMPUTER DISPLAY MODE: !*/
-      .kitty-photos1,
-      #kittyphotos2 {
-        border: none;
-        background-color: none;
-      }
+     
 
       .mp3 {
         grid-area: mp3;
@@ -65,13 +60,10 @@
       .kitty-photos2 {
         grid-area: kitty-photos2;
         border: none;
-        border: 1px solid orange;
       }
 
       #kittyphotos2 img {
-        width: 100px;
-        margin-left: 50px;
-        margin-bottom: 20px;
+        
         border: 1px solid orange;
       }
 
@@ -199,12 +191,12 @@
           grid-template-columns: 90vw;
           /* single column */
           grid-template-areas:
-            "kitty-photos1"
-            "mp3"
             "header"
-            "siteupdate"
-            "kitty-photos2"
             "webrings"
+            "mp3"
+            "kitty-photos2"  
+            "siteupdate"
+            "kitty-photos1"
             "books"
             "photos";
           grid-template-rows: auto;
@@ -212,22 +204,42 @@
           background: black;
         }
 
+
         .kitty-photos1 {
           border: 1px solid orange;
           text-align: center;
         }
 
         .kitty-photos1 img {
-          height: 120px;
-          width: 100px;
+          height: 21vw;
+          width: 18vw;
           display: inline-block;
-          margin-left: 40px;
-          margin-right: 40px;
+          margin-left: 1vw;
+          margin-right: 1vw;
+          
+        }
+
+        .kitty-photos2 {
+          border: 1px solid orange;
+          text-align: center;
+        }
+
+        .kitty-photos2 img {
+          height: 20vw;
+          width: 15vw;
+          display: inline-block;
+          margin-left: 1vw;
+          margin-right: 1vw;
         }
 
         .mp3 {
           border-top: none;
           border: 1px solid orange;
+        }
+
+        .myImg{
+          width: 40vw
+          height: 40vw;
         }
 
         .mp3 img {
@@ -249,12 +261,19 @@
           line-height: 1.3rem;
         }
 
-        .kitty-photos2 {
+        
+
+        .noaiwebring {
           border: 1px solid orange;
+          font-size: 5.6vw;
         }
 
-        .webrings {
-          border: 1px solid orange;
+        .header{
+          font-size: 18vw;
+        }
+
+        .deco {
+          display: none;
         }
       }
 
@@ -267,7 +286,21 @@
         #kittyphotos1 img {
           width: 150px;
           margin-left: -30px;
+          border: none;
+          background-color: none;
         }
+        #kittyphotos2 img{
+        width: 100px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        border: none;
+        background-color: none;
+      }
+
+        .header{
+          font-size: 7.5rem;
+        }
+      
       }
 
       /* CLOCK */
@@ -296,7 +329,6 @@
 
       .header p {
         white-space: nowrap;
-        font-size: 7.4rem;
         text-align: center;
         margin-top: 0px;
         margin-bottom: 0px;
@@ -392,7 +424,7 @@
             <p class="ghTextOutline">-ˏ͛⑅　‧̥̥͙‧̥̥ ̥ ̮ ̥ ⊹ ‧̫‧ ⊹ ̥ ̮ ̥ ‧̥̥‧̥̥͙　⑅ˏ͛- </p>
           </span>
       </div>
-      <div class="kittyphotos" id="kittyphotos2" style="border: none">
+      <div id="kittyphotos2" class="kitty-photos2">
         <a href="https://user.xmission.com/~emailbox/graphics.htm">
           <img title="from catstuff!" src="Gifs/country1.gif">
         </a>
