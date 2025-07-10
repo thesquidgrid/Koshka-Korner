@@ -30,7 +30,7 @@
         ". . webrings . ."
         ". book photos . ."
         ". button1 button2 button3 ."
-          ". . kitty . .";
+        ". . kitty . .";
     }
 
     .mp3 {
@@ -89,7 +89,6 @@
       grid-area: button1;
       background-color: black;
       z-index: 999;
-      
     }
 
     .button2 {
@@ -97,7 +96,7 @@
       border-bottom: 1px solid orange;
       background-color: black;
     }
-    
+
     .button3 {
       grid-area: button3;
       border-bottom: 1px solid orange;
@@ -200,18 +199,29 @@
       margin-bottom: 0;
     }
 
-    .button { 
-     border: 1px solid orange;
-     position:relative;
-     z-index: 1000;
-     color: orange;
-     text-align: center;
-     display:inline-block;
-     height: 50px;
-     justify-content: center;
+    .button {
+      border: 1px solid orange;
+      position: relative;
+      z-index: 1000;
+      color: orange;
+      text-align: center;
+      display: inline-block;
+      cursor: pointer;
+      background-color: rgba(255, 166, 0, 0);
+      font-family: AcPlus_IBM_EGA_8x14;
+      word-wrap: break-word;
 
     }
-   
+
+    .button:active {
+      box-shadow: 0px 0px 1rem orange;
+    }
+
+    .buttonWrapper{
+      justify-content: center;
+      display:flex;
+    }
+
     .buttonText {
       margin-top: 10px;
     }
@@ -229,10 +239,10 @@
           "mp3"
           "kitty-photos2"
           "book"
+          "button1"
           "kitty-photos1"
           "siteupdate"
           "photos"
-          "button1"
           "button2"
           "button3";
         grid-template-rows: auto;
@@ -318,10 +328,15 @@
       }
 
       .button1 {
-      z-index: 999;
-      
-      max-width: 90vw;
-    }
+        z-index: 999;
+        max-width: 90vw;
+      }
+
+      .button{
+        width: 18vw;
+        height: 11vw;
+        font-size: 4vw;
+      }
     }
 
     /*  COMPUTER VIEWING: */
@@ -362,13 +377,18 @@
       .book {
         min-width: 400px;
       }
+
       .button1 {
-      grid-area: button1;
-      background-color: black;
-      z-index: 999;
-      min-width: 960px;
-    }
-      
+        background-color: black;
+        z-index: 999;
+        min-width: 960px;
+      }
+
+      .button{
+        width: 192px;
+        height: 50px;
+        font-size: 20px;
+      }
     }
 
     /* CLOCK */
@@ -603,45 +623,33 @@
         <span tabindex="0" class="bookBox" title="If you like being sad, mysteries, and charming characters - i cannot reccomend this book enough. 100000/10 tasmynd muir is a genius and has captured my heart forever.">
           <p style="font-size: 1.4rem; margin-left: 4px;"> Giddeon the Ninth</p>
         </span>
-        
       </bookcontainer>
     </div>
-    <div class="photos" style = "margin-left:230px; background-color: black; border-bottom: #ffa500 solid 1px;">
-      <p>
-        meowmeowmeowmeow
-      </p>
+    <div class="photos" style="margin-left:230px; background-color: black; border-bottom: #ffa500 solid 1px;">
+      <p> meowmeowmeowmeow </p>
     </div>
     <div>
     </div>
     <div>
     </div>
-    <div></div>
-    <div class = "button1">
-
-      <div class="button">
-        This is a box!
-      </div>
-      <div class="button">
-        This is a box!
-      </div>
-      <div class="button">
-        This is a box!
-      </div>
-      <div class="button">
-        This is a box!
-      </div>
-      <div class="button">
-        This is a box!
+    <div>
+    </div>
+    <div class="button1">
+      <div class="buttonWrapper">
+        <button class="button"> About Me </button>
+        <button class="button"> Site Map </button>
+        <button class="button"> Book Shelf </button>
+        <button class="button"> Contact </button>
+        <button class="button"> Resources </button>
       </div>
     </div>
-    <div class = "button2"></div>
-    <div class = "button3"></div>
+    <div class="button2">
+    </div>
+    <div class="button3">
+    </div>
   </div>
-  
   <!-- new line
          -->
-  
-
 </body>
 
 </html>
