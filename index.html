@@ -18,6 +18,8 @@
     :root {
       --fonts: gaegu-r, ms pgothic, arial;
       --viewfinderWidth: 60rem;
+      --borderColor: 1px solid #ffa60048;
+      --shadow: 0 0 20px rgb(255, 115, 1);
     }
 
     #wrapHeader {
@@ -36,7 +38,7 @@
     .mp3 {
       grid-area: mp3;
       display: block;
-      border: 1px solid orange;
+      border: var(--borderColor);
       background-color: black;
     }
 
@@ -44,19 +46,19 @@
       height: 199px;
       width: 169px;
       z-index: 999;
-      border: 1px solid orange;
+      border: var(--borderColor);
       background-color: black;
     }
 
     .header {
       grid-area: header;
-      border: 1px solid orange;
+      border: var(--borderColor);
       background-color: black;
     }
 
     .siteupdate {
       grid-area: siteupdate;
-      border: 1px solid orange;
+      border: var(--borderColor);
       background-color: black;
     }
 
@@ -66,18 +68,18 @@
     }
 
     #kittyphotos2 img {
-      border: 1px solid orange;
+      border: var(--borderColor);
     }
 
     .webrings {
       grid-area: webrings;
-      border: 1px solid orange;
+      border: var(--borderColor);
       background-color: black;
     }
 
     .book {
       grid-area: book;
-      border: 1px solid orange;
+      border: var(--borderColor);
       background-color: black;
     }
 
@@ -172,6 +174,7 @@
       font-family: AcPlus_IBM_EGA_8x14;
       color: rgb(255, 255, 255);
       text-shadow: 0 0 20px #ff7301;
+      text-shadow: var(--shadow);
       font-size: 16px;
       text-align: left;
       padding: 5px;
@@ -184,6 +187,7 @@
       line-height: 1;
       z-index: 900;
       position: relative;
+      text-shadow: var(--shadow);
       overflow: scroll;
     }
 
@@ -193,7 +197,7 @@
     }
 
     .button {
-      border: 1px solid orange;
+      border: var(--borderColor);
       position: relative;
       z-index: 1000;
       color: orange;
@@ -203,6 +207,7 @@
       background-color: rgba(255, 166, 0, 0);
       font-family: AcPlus_IBM_EGA_8x14;
       word-wrap: break-word;
+      text-shadow: var(--shadow);
     }
 
     .button:active {
@@ -242,7 +247,7 @@
       }
 
       .kitty-photos1 {
-        border: 1px solid orange;
+        border: var(--borderColor);
         text-align: center;
       }
 
@@ -255,7 +260,7 @@
       }
 
       .kitty-photos2 {
-        border: 1px solid orange;
+        border: var(--borderColor);
         text-align: center;
       }
 
@@ -269,7 +274,7 @@
 
       .mp3 {
         border-top: none;
-        border: 1px solid orange;
+        border: var(--borderColor);
       }
 
       #TrackName {
@@ -293,11 +298,11 @@
       }
 
       .header {
-        border: 1px solid orange;
+        border: var(--borderColor);
       }
 
       .siteupdate {
-        border: 1px solid orange;
+        border: var(--borderColor);
       }
 
       .ghUpdateContainer {
@@ -306,7 +311,7 @@
       }
 
       .noaiwebring {
-        border: 1px solid orange;
+        border: var(--borderColor);
         font-size: 5.6vw;
       }
 
@@ -621,7 +626,7 @@
     <div>
     </div>
     <!-- spacer-->
-    <div style="z-index:0; background-color: black; border-left: 1px orange solid; border-bottom: 1px orange solid ">
+    <div style="z-index:0; background-color: black; border-left: var(--borderColor); border-bottom: var(--borderColor)">
     </div>
     <div class="webrings">
       <span class="noaiwebring">
