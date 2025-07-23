@@ -1,7 +1,7 @@
 ---
-title: Welcome to Strawberry Starter!
+title: Welcome!
 date: 2024-01-01
-layout: template.html
+layout: layout.html
 ---
 A simple, quick blog template for [11ty](https://www.11ty.dev/)!
 ![pixel art of a strawberry](/assets/images/berrysprite.png)
