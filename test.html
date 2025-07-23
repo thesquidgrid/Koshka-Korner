@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>List of Items</h2>
+
+<ul>
+</ul>  
+
+<script>
+
+    const listEl = document.querySelector('ul');
+
+    fetch('./posts.json')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(post => {
+                listEl.insertAdjacentHTML('beforeend', `<li>${post.title}</li>`)
+            });
+        });
+</script>
+    
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+---
+title: All Posts
+date: 2025-01-01
+---
+{% if not collections.post %}
+<ol id="latest_posts">
+    {% for i in collections.posts reversed %}
+    <li><a href="{{ i.url }}">{{ i.date | dateFormat }} - {{ i.data.title }}</a></li>
+    {% endfor %}
+</ol>
+{% else %}
+<p>No posts yet!</p>
+{% endif %}
+
+{% if collections | filterTags %}
+<h2>Posts by tag:</h2>
+{% include "allTags.html" %}
+{% endif %}
