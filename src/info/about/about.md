@@ -1,8 +1,10 @@
 ---
-title: template
+title: About
 date: 2025-01-20
 ---
-markdown template
-## Special thanks
-- [Zonelets](https://zonelets.net/)
-    - Zonelets is a huge inspiration to me! Part of my design goal for Strawberry Starter was basically "Zonelets but without needing to write HTML".
+**About me:**
+
+- 20y.o engineering student
+- Koshka Buchman
+- I love russian lit
+- Currently Reading: the cossaks by leo tolstoy

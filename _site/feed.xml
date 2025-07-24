@@ -11,19 +11,41 @@
     <name>Koshka Buchman</name>
   </author>
   <entry>
-    <title>second Post!</title>
-    <link href="https://koshka-korner.neocities.org/_site/posts/First-Post%20copy/" />
+    <title>Future Plans</title>
+    <link href="https://koshka-korner.neocities.org/_site/posts/Library-Plans/" />
     <updated>2025-07-23T00:00:00Z</updated>
-    <id>https://koshka-korner.neocities.org/_site/posts/First-Post%20copy/</id>
-    <content type="html">&lt;p&gt;second post for testing purposes lol&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>template!</title>
-    <link href="https://koshka-korner.neocities.org/_site/posts/First-Post/" />
-    <updated>2025-07-22T00:00:00Z</updated>
-    <id>https://koshka-korner.neocities.org/_site/posts/First-Post/</id>
-    <content type="html">&lt;p&gt;template&lt;/p&gt;
+    <id>https://koshka-korner.neocities.org/_site/posts/Library-Plans/</id>
+    <content type="html">&lt;h3&gt;My Idea:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;online bookshelf :D&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;How I Plan To Execute It:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;use Eleventy to generate html websites for each book i read - each review will be put in mark down format (optional project, using php to make a fillable form with php to generate md text to then be generated into html format)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learn more Node.js. Until using strawberry starter, i had no interest in node.js. Now i see how powerful it is and it makes me so so so excited.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Interaction and Viewing:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;each time i generate a book review, a new &amp;quot;book&amp;quot; will fill the bookshelf. to view a review, a user must click on a bookshelf to view the review&lt;/li&gt;
+&lt;li&gt;the html will be shown in a iframe on the right side of the webpage. i have not thought in depth about viewing on mobile, however it is my goal to make all my webpages look nice and usable on mobile. On mobile, i think it would be nice to have a sort of &amp;quot;small sample&amp;quot; of my most recent books so that users may still be able to read the reviews.&lt;/li&gt;
+&lt;li&gt;there will be an index of all the reviews that will be linked in a notification at the top of the website, where each review is listed by recent-ness.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Optional&lt;/strong&gt;? : add another index sorting reviews by author last name
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Optional&lt;/strong&gt; &lt;strong&gt;Optional&lt;/strong&gt;? : add another index sorting reviews by publication date of book&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Computer Viewing:&lt;/strong&gt;
+&lt;img src=&quot;https://koshka-korner.neocities.org/_site/assets/images/Bookshelf-desktop.png&quot; alt=&quot;Computer Viewing&quot;&gt;
+&lt;strong&gt;Mobile Viewing:&lt;/strong&gt;
+&lt;img src=&quot;https://koshka-korner.neocities.org/_site/assets/images/Bookshelf-mobile.webp&quot; alt=&quot;Mobile Viewing&quot;&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>

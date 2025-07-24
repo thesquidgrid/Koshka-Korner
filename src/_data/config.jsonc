@@ -34,6 +34,9 @@
 
     "creditTo": "https://strawberrystarter.neocities.org/",
 
+    //contrast
+    //light-mode
+    //dark-mode
     "siteStyle": "contrast",
 
     // (optional) upload your site to a subdirectory
