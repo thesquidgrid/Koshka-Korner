@@ -1,23 +1,28 @@
 {
-  "name": "koshkakorner",
-  "version": "1.0.0",
-  "description": "",
-  "main": "album.js",
+  "name": "strawberry-starter",
+  "version": "1.1.0",
+  "description": "a simply sweet blog template",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thesquidgrid/koshkakorner.git"
+    "start": "npm run dev",
+    "dev": "rimraf _site/ && npx @11ty/eleventy --serve --port 1234",
+    "build": "rimraf _site/ && npx @11ty/eleventy",
+    "upload": "npm run build && node _functions/upload-neo.js",
+    "backup": "rimraf _backup/ && node _functions/back-up.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thesquidgrid/koshkakorner/issues"
-  },
-  "homepage": "https://github.com/thesquidgrid/koshkakorner#readme",
+  "author": "Kate Bagenzo",
+  "license": "MIT",
   "dependencies": {
-    "ditherjs": "^0.10.0"
-  }
+    "20": "^3.1.9",
+    "@11ty/eleventy": "3.1.0-beta.1",
+    "@11ty/eleventy-plugin-rss": "2.0.3",
+    "dotenv": "^16.4.7",
+    "dotenv-flow": "^4.1.0",
+    "form-data": "^4.0.1",
+    "jsonc": "^2.0.0",
+    "postinstall": "^0.11.0",
+    "rimraf": "^6.0.1"
+  },
+  "type": "module"
 }

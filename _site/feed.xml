@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="assets/styles/rss.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Koshka-Korner</title>
+  <subtitle>My Thoughts on Stuff</subtitle>
+  <link href="https://koshka-korner.neocities.org/_site/feed.xml" rel="self" />
+  <link href="https://koshka-korner.neocities.org/_site/" />
+  <updated>2025-07-22T00:00:00Z</updated>
+  <id>https://koshka-korner.neocities.org/_site/</id>
+  <author>
+    <name>Koshka Buchman</name>
+  </author>
+  <entry>
+    <title>template!</title>
+    <link href="https://koshka-korner.neocities.org/_site/posts/First-Post/" />
+    <updated>2025-07-22T00:00:00Z</updated>
+    <id>https://koshka-korner.neocities.org/_site/posts/First-Post/</id>
+    <content type="html">&lt;p&gt;template&lt;/p&gt;
+</content>
+  </entry>
+</feed>
