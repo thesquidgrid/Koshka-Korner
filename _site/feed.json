@@ -1,0 +1,93 @@
+{
+    "_declaration": {
+        "_attributes": {
+            "version": "1.0",
+            "encoding": "utf-8"
+        }
+    },
+    "_instruction": {
+        "xml-stylesheet": "href=\"assets/styles/rss.xsl\" type=\"text/xsl\""
+    },
+    "feed": {
+        "_attributes": {
+            "xmlns": "http://www.w3.org/2005/Atom",
+            "xml:lang": "en"
+        },
+        "title": {
+            "_text": "Koshka-Korner"
+        },
+        "subtitle": {
+            "_text": "My Thoughts on Stuff"
+        },
+        "link": [
+            {
+                "_attributes": {
+                    "href": "https://koshka-korner.neocities.org/_site/feed.xml",
+                    "rel": "self"
+                }
+            },
+            {
+                "_attributes": {
+                    "href": "https://koshka-korner.neocities.org/_site/"
+                }
+            }
+        ],
+        "updated": {
+            "_text": "2025-07-24T00:00:00Z"
+        },
+        "id": {
+            "_text": "https://koshka-korner.neocities.org/_site/"
+        },
+        "author": {
+            "name": {
+                "_text": "Koshka Buchman"
+            }
+        },
+        "entry": [
+            {
+                "title": {
+                    "_text": "Credits"
+                },
+                "link": {
+                    "_attributes": {
+                        "href": "https://koshka-korner.neocities.org/_site/posts/Credits/"
+                    }
+                },
+                "updated": {
+                    "_text": "2025-07-24T00:00:00Z"
+                },
+                "id": {
+                    "_text": "https://koshka-korner.neocities.org/_site/posts/Credits/"
+                },
+                "content": {
+                    "_attributes": {
+                        "type": "html"
+                    },
+                    "_text": "<h2>Special thanks</h2>\n<ul>\n<li><a href=\"https://strawberrystarter.neocities.org/\">Strawberry Starter</a>\n<ul>\n<li>Thanks to strawberry starter for the wonderful template!</li>\n</ul>\n</li>\n<li><a href=\"https://doqmeat.com/\">doqmeat</a>\n<ul>\n<li>Doqmeat for having their code avalible on github and showing me how a website can be stylish and accesible.</li>\n</ul>\n</li>\n<li><a href=\"https://archive.org/\">Internet Archive</a>\n<ul>\n<li>Internet Archive is an invaluable source for reasearching and looking through the old net. If you want to find an authentic template, browsing [gifcities][https://gifcities.org/] is the way to go.</li>\n</ul>\n</li>\n<li><a href=\"http://www.mf2fm.com/rv\">mf2fm web-design</a>\n<ul>\n<li>Much appreciation to RV for the wonderful javascript effects.</li>\n</ul>\n</li>\n<li><a href=\"https://nenrikido.neocities.org/blog/post/deploy-site/\">Nenrikido</a>\n<ul>\n<li>For the amazing indepth tutorial on how to connect github with the neocities CLI.</li>\n</ul>\n</li>\n<li>My friends\n<ul>\n<li>&lt;3 luv you guys</li>\n</ul>\n</li>\n</ul>\n"
+                }
+            },
+            {
+                "title": {
+                    "_text": "Future Plans"
+                },
+                "link": {
+                    "_attributes": {
+                        "href": "https://koshka-korner.neocities.org/_site/posts/Library-Plans/"
+                    }
+                },
+                "updated": {
+                    "_text": "2025-07-23T00:00:00Z"
+                },
+                "id": {
+                    "_text": "https://koshka-korner.neocities.org/_site/posts/Library-Plans/"
+                },
+                "content": {
+                    "_attributes": {
+                        "type": "html"
+                    },
+                    "_text": "<h3>My Idea:</h3>\n<ul>\n<li>online bookshelf :D</li>\n</ul>\n<h3>How I Plan To Execute It:</h3>\n<ul>\n<li>\n<p>use Eleventy to generate html websites for each book i read - each review will be put in mark down format (optional project, using php to make a fillable form with php to generate md text to then be generated into html format)</p>\n</li>\n<li>\n<p>Learn more Node.js. Until using strawberry starter, i had no interest in node.js. Now i see how powerful it is and it makes me so so so excited.</p>\n</li>\n</ul>\n<h3>Interaction and Viewing:</h3>\n<ul>\n<li>each time i generate a book review, a new &quot;book&quot; will fill the bookshelf. to view a review, a user must click on a bookshelf to view the review</li>\n<li>the html will be shown in a iframe on the right side of the webpage. i have not thought in depth about viewing on mobile, however it is my goal to make all my webpages look nice and usable on mobile. On mobile, i think it would be nice to have a sort of &quot;small sample&quot; of my most recent books so that users may still be able to read the reviews.</li>\n<li>there will be an index of all the reviews that will be linked in a notification at the top of the website, where each review is listed by recent-ness.\n<ul>\n<li><strong>Optional</strong>? : add another index sorting reviews by author last name\n<ul>\n<li><strong>Optional</strong> <strong>Optional</strong>? : add another index sorting reviews by publication date of book</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Computer Viewing:</strong>\n<img src=\"https://koshka-korner.neocities.org/_site/assets/images/Bookshelf-desktop.png\" alt=\"Computer Viewing\">\n<strong>Mobile Viewing:</strong>\n<img src=\"https://koshka-korner.neocities.org/_site/assets/images/Bookshelf-mobile.webp\" alt=\"Mobile Viewing\"></p>\n"
+                }
+            }
+        ]
+    }
+}

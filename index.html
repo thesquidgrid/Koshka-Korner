@@ -366,6 +366,18 @@
         margin: auto;
         font-size: 2.2vw;
       }
+
+      .bloglink{
+
+      }
+
+      .blogtitle{
+
+      }
+
+      .blogDate{
+        
+      }
     }
 
     /*  COMPUTER VIEWING: */
@@ -563,66 +575,8 @@
   </style>
 
 <body style="display: flex; justify-content: center;" >
-  <script>
-    fetch("/_site/feed.xml")
-            .then((response) => response.text())
-            .then((xmlString) => {
-                const parser = new DOMParser();
-                const xmlDoc = parser.
-                    parseFromString(xmlString, "text/xml");
-                
-                const feeds = xmlDoc.
-                    querySelectorAll("entry");
-                const titles = xmlDoc.
-                    querySelectorAll("title");
-                
-
-
-                //yes i know this is an abomination.
-                //no i will not figure out the right way to do this
-                //I HATE NODES 
-                //okay not really but holy shit i wish there was a way to hide information that wasn't just null
-                let count = 0;
-            
-                feeds.forEach((entry) => {
-                    while(count == 0){
-                    const id = entry.
-                        querySelector("id").textContent;
-                    const updated = entry.
-                        querySelector("updated").textContent;
-                    const title = entry.
-                        querySelector("title").textContent;
-                    document.getElementById("title").innerHTML = title;
-                    document.getElementById("dateTitled").innerHTML = updated.slice(0,10); 
-                    var link = document.getElementById("link");
-                    link.setAttribute("href", id);
-
-                    console.log(`${title}, ${updated}, ${id}`);
-                    count++;
-                    }
-                });
-                
-            });
-  </script>
-  <script src="scripts_neocitiesedit/listeningto.js" defer>
-  </script>
-  <script src="scripts_neocitiesedit/album.js">
-  </script>
-   <script src="scripts_neocitiesedit/sparkle.js">
-  </script>
-  <script src="scripts_neocitiesedit/siteUpdateLog.js">
-  </script>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
-  </script>
-  <script src="scripts_neocitiesedit/tooltip-jquary.js">
-  </script>
-  <script src="scripts_neocitiesedit/tooltip.js">
-  </script>
-  <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js">
-  </script>
-  <script src="scripts_neocitiesedit/buttonShadow.js">
-  </script>
+  
   <div id="wrapHeader">
     <div id="kittyphotos1" class="kitty-photos1">
       <a href="http://diabellalovescats.com/">
@@ -722,10 +676,10 @@
 
       <span class = "blogDetails" style = "color: orange">
         <h1> Newest Entry: </h1>
-      <a id = "link" href="" target="_blank">
-      <h3 id = "title"> meow </h3>
+      <a id = "bloglink" href="" target="_blank">
+      <h3 id = "blogtitle">  </h3>
       </a>
-      <h3 id = "dateTitled"> x/x/20XX </h3>
+      <h3 id = "blogdate"> </h3>
 
       </span>
       
@@ -791,5 +745,27 @@
   <!-- new line
          -->
 </body>
+
+<script src="scripts_neocitiesedit/listeningto.js" defer>
+  </script>
+  <script src="scripts_neocitiesedit/recentPost.js" defer>
+  </script>
+  <script src="scripts_neocitiesedit/album.js">
+  </script>
+   <script src="scripts_neocitiesedit/sparkle.js">
+  </script>
+  <script src="scripts_neocitiesedit/siteUpdateLog.js">
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+  </script>
+  <script src="scripts_neocitiesedit/tooltip-jquary.js">
+  </script>
+  <script src="scripts_neocitiesedit/tooltip.js">
+  </script>
+  <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js">
+  </script>
+  <script src="scripts_neocitiesedit/buttonShadow.js">
+  </script>
 
 </html>

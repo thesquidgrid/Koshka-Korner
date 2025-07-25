@@ -4,11 +4,12 @@
   "description": "a simply sweet blog template",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev",
+    "start": "npm run dev && node xmltojson.cjs",
     "dev": "rimraf _site/ && npx @11ty/eleventy --serve --port 1234",
-    "build": "rimraf _site/ && npx @11ty/eleventy",
+    "build": "rimraf _site/ && npx @11ty/eleventy && node xmltojson.cjs",
     "upload": "npm run build && node _functions/upload-neo.js",
-    "backup": "rimraf _backup/ && node _functions/back-up.js"
+    "backup": "rimraf _backup/ && node _functions/back-up.js",
+    "run": "node xmltojson.cjs"
   },
   "keywords": [],
   "author": "Kate Bagenzo",
@@ -24,7 +25,9 @@
     "jsonc": "^2.0.0",
     "postinstall": "^0.11.0",
     "rimraf": "^6.0.1",
-    "xml2js": "^0.6.2"
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.6.2",
+    "xml2json": "^0.12.0"
   },
   "type": "module"
 }

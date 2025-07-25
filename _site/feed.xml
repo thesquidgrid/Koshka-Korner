@@ -5,11 +5,51 @@
   <subtitle>My Thoughts on Stuff</subtitle>
   <link href="https://koshka-korner.neocities.org/_site/feed.xml" rel="self" />
   <link href="https://koshka-korner.neocities.org/_site/" />
-  <updated>2025-07-23T00:00:00Z</updated>
+  <updated>2025-07-24T00:00:00Z</updated>
   <id>https://koshka-korner.neocities.org/_site/</id>
   <author>
     <name>Koshka Buchman</name>
   </author>
+  <entry>
+    <title>Credits</title>
+    <link href="https://koshka-korner.neocities.org/_site/posts/Credits/" />
+    <updated>2025-07-24T00:00:00Z</updated>
+    <id>https://koshka-korner.neocities.org/_site/posts/Credits/</id>
+    <content type="html">&lt;h2&gt;Special thanks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://strawberrystarter.neocities.org/&quot;&gt;Strawberry Starter&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Thanks to strawberry starter for the wonderful template!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://doqmeat.com/&quot;&gt;doqmeat&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Doqmeat for having their code avalible on github and showing me how a website can be stylish and accesible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://archive.org/&quot;&gt;Internet Archive&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Internet Archive is an invaluable source for reasearching and looking through the old net. If you want to find an authentic template, browsing [gifcities][https://gifcities.org/] is the way to go.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.mf2fm.com/rv&quot;&gt;mf2fm web-design&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Much appreciation to RV for the wonderful javascript effects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nenrikido.neocities.org/blog/post/deploy-site/&quot;&gt;Nenrikido&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;For the amazing indepth tutorial on how to connect github with the neocities CLI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;My friends
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;3 luv you guys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Future Plans</title>
     <link href="https://koshka-korner.neocities.org/_site/posts/Library-Plans/" />
