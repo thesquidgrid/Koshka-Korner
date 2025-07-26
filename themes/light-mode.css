@@ -1,0 +1,560 @@
+    * {
+      box-sizing: border-box;
+      list-style-position: inside;
+    }
+
+    :root {
+      --fonts: gaegu-r, ms pgothic, arial;
+      --viewfinderWidth: 60rem;
+      --borderColor: 1px solid #000000;
+      --shadow: 0;
+      --bgcolor: rgb(255, 255, 255);
+      --txtcolor: rgb(0, 0, 0);
+      --kitty-text: black;
+    }
+
+    #wrapHeader {
+      display: grid;
+      grid-template-columns: 150px 170px 600px 190px 150px;
+      grid-template-rows: 110px 100px 220px 50px 130px;
+      gap: 0px 0px;
+      grid-template-areas:
+        "kitty-photos1 mp3 header siteupdate kitty-photos2"
+        ". . webrings . ."
+        ". book photos . ."
+        ". button1 . . ."
+        ". kitty . . ."
+    }
+
+    .mp3 {
+      grid-area: mp3;
+      display: block;
+      border: var(--borderColor);
+      background-color: var(--bgcolor);
+    }
+
+    .mp3img img {
+      height: 199px;
+      width: 169px;
+      z-index: 999;
+      border: var(--borderColor);
+      background-color: var(--bgcolor);
+    }
+
+    .header {
+      grid-area: header;
+      border: var(--borderColor);
+      background-color: var(--bgcolor);
+    }
+
+    .siteupdate {
+      grid-area: siteupdate;
+      border: var(--borderColor);
+      background-color: var(--bgcolor);
+    }
+
+    .kitty-photos2 {
+      grid-area: kitty-photos2;
+      border: none;
+    }
+
+    #kittyphotos2 img {
+      border: var(--borderColor);
+    }
+
+    .webrings {
+      grid-area: webrings;
+      border: var(--borderColor);
+      background-color: var(--bgcolor);
+    }
+
+    .book {
+      grid-area: book;
+      border: var(--borderColor);
+      background-color: var(--bgcolor);
+    }
+
+    .photos {
+      grid-area: photos;
+    }
+
+    .button1 {
+      grid-area: button1;
+      background-color: var(--bgcolor);
+      z-index: 999;
+    }
+
+    .kitty {
+      grid-area: kitty;
+      background-color: var(--bgcolor);
+      z-index: 0;
+    }
+
+    /*end of divs!*/
+    
+    body {
+      font-family: Arial;
+      background: var(--bgcolor);
+    }
+
+    .siteupdate {
+      overflow: scroll;
+      text-align: center;
+      line-height: 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 999;
+      min-height: 430px;
+      scrollbar-width: none;
+      color: var(--txtcolor);
+      text-align: center;
+      text-shadow: var(--shadow);
+      font-size: 15px;
+    }
+
+    .mp3img img {
+      height: 199px;
+      width: 169px;
+      z-index: 999;
+    }
+
+    .mp3 {
+      display: block;
+    }
+
+    .noaiwebring {
+      text-align: center;
+      display: block;
+      margin: auto;
+      font-size: 2.2rem;
+    }
+
+    .noaiwebring a,
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: none;
+      color: var(--txtcolor);
+      text-shadow: var(--shadow);
+    }
+
+    .myImg {
+      position: relative;
+      z-index: 100;
+    }
+
+    .myImg:hover {
+      color: #111;
+      background: var(--txtcolor);
+      box-shadow: var(--shadow);
+    }
+
+
+    #s-m-t-tooltip {
+      /* template from doqmeat. - edited by me -w-*/
+      border-radius: 10px;
+      border: var(--borderColor);
+      box-shadow: var(--shadow);
+      background-color: var(--bgcolor);
+      max-width: 200px;
+      font-family: AcPlus_IBM_EGA_8x14;
+      color: var(--txtcolor);
+      text-shadow: var(--shadow);
+      text-shadow: var(--shadow);
+      font-size: 16px;
+      text-align: left;
+      padding: 5px;
+      z-index: 9999;
+      margin: 10px;
+    }
+
+    .trackInfo {
+      text-align: center;
+      line-height: 1;
+      z-index: 900;
+      position: relative;
+      text-shadow: var(--shadow);
+      overflow: scroll;
+    }
+
+    .trackInfo p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .button {
+      border: var(--borderColor);
+      position: relative;
+      z-index: 1000;
+      color: var(--txtcolor);
+      text-align: center;
+      display: inline-block;
+      cursor: pointer;
+      background-color: rgba(255, 166, 0, 0);
+      font-family: AcPlus_IBM_EGA_8x14;
+      word-wrap: break-word;
+      text-shadow: var(--shadow);
+    }
+
+    .button:active {
+      box-shadow: 0px 0px 1rem orange;
+    }
+
+    .buttonWrapper {
+      justify-content: center;
+      display: flex;
+    }
+
+    .buttonText {
+      margin-top: 10px;
+    }
+
+    .blogDetails{
+      color: var(--txtcolor);
+      text-align: center;
+      text-shadow: var(--shadow);
+    }
+
+    .photos a,
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--txtcolor);
+      text-shadow: var(--shadow);
+    }
+
+    /*  PHONE VIEWING: */
+    @media screen and (max-width: 1040px) {
+      #wrapHeader {
+        width: auto;
+        display: grid;
+        grid-template-columns: 90vw;
+        /* single column */
+        grid-template-areas:
+          "header"
+          "webrings"
+          "mp3"
+          "kitty-photos2"
+          "button1"
+          "book"
+          "kitty-photos1"
+          "photos"
+          "siteupdate"
+          "kitty";
+        grid-template-rows: auto;
+        align-content: center;
+        background: black;
+      }
+
+      .kitty-photos1 {
+        border: var(--borderColor);
+        text-align: center;
+      }
+
+      .kitty-photos1 img {
+        height: 21vw;
+        width: 18vw;
+        display: inline-block;
+        margin-left: 1vw;
+        margin-right: 1vw;
+      }
+
+      .kitty-photos2 {
+        border: var(--borderColor);
+        text-align: center;
+      }
+
+      .kitty-photos2 img {
+        height: 20vw;
+        width: 15vw;
+        display: inline-block;
+        margin-left: 1vw;
+        margin-right: 1vw;
+      }
+
+      .mp3 {
+        border-top: none;
+        border: var(--borderColor);
+      }
+
+      #TrackName {
+        margin-top: 2vw;
+      }
+
+      .trackInfo {
+        font-size: 7vw;
+      }
+
+      #myImg {
+        float: right;
+        border: 2px solid rgba(255, 166, 0, 0.466);
+        height: 40vw;
+        position: relative;
+        z-index: 999;
+      }
+
+      .mp3 img {
+        height: 200px;
+      }
+
+      .header {
+        border: var(--borderColor);
+      }
+
+      .siteupdate {
+        border: var(--borderColor);
+      }
+
+      .ghUpdateContainer {
+        font-size: 1.8rem;
+        line-height: 1.3rem;
+      }
+
+      .noaiwebring {
+        border: var(--borderColor);
+        font-size: 5.6vw;
+      }
+
+      .header {
+        font-size: 18vw;
+      }
+
+      .deco {
+        display: none;
+      }
+
+      .bookBox p {
+        font-size: 1rem;
+      }
+
+      .button1 {
+        z-index: 999;
+        max-width: 90vw;
+      }
+
+      .button {
+        width: 18vw;
+        height: 11vw;
+        font-size: 4vw;
+      }
+
+      .photos {
+        border: none;
+        border-bottom: 1px #e39632ad solid;
+      }
+
+      .kittyFlexbox {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .kittyFlexbox pre {
+        margin: auto;
+        font-size: 2.2vw;
+      }
+
+      .bloglink{
+
+      }
+
+      .blogtitle{
+
+      }
+
+      .blogDate{
+        
+      }
+    }
+
+    /*  COMPUTER VIEWING: */
+    @media only screen and (min-width: 1040px) {
+      .myImg {
+        height: 100px;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        z-index: 999;
+        position: relative;
+      }
+
+      #kittyphotos1 img {
+        width: 150px;
+        margin-left: -30px;
+        border: none;
+        background-color: none;
+      }
+
+      #kittyphotos2 img {
+        width: 100px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        border: none;
+        background-color: none;
+      }
+
+      .header {
+        font-size: 7.5rem;
+      }
+
+      .deco-comp {
+        display: none;
+      }
+
+      .book {
+        min-width: 400px;
+      }
+
+      .bookBox p {
+        font-size: 1vw;
+      }
+
+      .button1 {
+        background-color: var(--bgcolor);
+        z-index: 999;
+        min-width: 960px;
+      }
+
+      .button {
+        width: 192px;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      .kittyFlexbox{
+        display: flex;
+        flex-direction: row;
+      }
+
+      .photos{
+        margin-left: 230px;
+      }
+    }
+
+    /* CLOCK */
+    clock {
+      border:
+        var(--borderColor);
+      box-shadow: var(--shadow);
+      margin:
+        auto;
+      align-content: center;
+      display: block;
+      background: black;
+      color: rgb(255, 255, 255);
+      width: 80px;
+      height: 20px;
+      font-family: AcPlus_IBM_EGA_8x14;
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    /* title styling and animation*/
+    .title {
+      color: var(--txtcolor);
+      text-shadow: var(--shadow);
+    }
+
+    .header p {
+      white-space: nowrap;
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      overflow:
+        hidden;
+      border-right:
+        .15em solid var(--txtcolor);
+      margin: .5 auto;
+      text-shadow: var(--shadow);
+      animation:
+        typing 3.5s steps(30, end), blink-caret .65s step-end 8;
+      border-right:
+        .15em solid transparent;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent
+      }
+
+      50% {
+        border-color: var(--txtcolor);
+      }
+    }
+
+    /* END OF STYLING FOR TITLE*/
+    /* BOOKSHELF */
+    bookContainer {
+      border:
+        3px solid var(--txtcolor);
+      box-shadow: var(--shadow);
+      margin:
+        auto;
+      align-content: center;
+      display: block;
+    }
+
+    .book {
+      align-content: center;
+    }
+
+    .bookBox {
+      width: 30px;
+      height: 165px;
+      border: solid var(--txtcolor) 2px;
+      display: inline-block;
+      margin-bottom: -5px;
+    }
+
+    .bookBox p {
+      font-size: 25px;
+      margin-bottom: 0px;
+      text-orientation: upright;
+      writing-mode: sideways-lr;
+      color: var(--txtcolor);
+      margin-left: 0px;
+      font-size: 1rem;
+      text-align: center;
+      height: 160px;
+      width: 30px;
+      margin-top: 0px;
+    }
+
+    @media (pointer: coarse),
+    (hover: none) {
+      [title]:focus::after {
+        content: attr(title);
+        position: absolute;
+        color: #ffffff;
+        background-color: #000000;
+        border: 1px solid rgb(128, 128, 128);
+        font-size: 5vw;
+        z-index: 999;
+        text-shadow: 0 0 1vw rgb(255, 115, 1);
+      }
+    }
+
+    .kittyFlexbox {
+      position: relative;
+      z-index: 999;
+    }
+
+    .kittyFlexbox pre {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--kitty-text);
+    }
