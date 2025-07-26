@@ -1,6 +1,8 @@
 ---
 title: Credits
 date: 2025-07-24
+tags:
+- navbar
 ---
 ## Special thanks
 - [Strawberry Starter](https://strawberrystarter.neocities.org/)
@@ -13,5 +15,7 @@ date: 2025-07-24
     - Much appreciation to RV for the wonderful javascript effects. 
 - [Nenrikido](https://nenrikido.neocities.org/blog/post/deploy-site/)
     - For the amazing indepth tutorial on how to connect github with the neocities CLI.
+- [Catstuff](https://user.xmission.com/~emailbox/graphics.htm)
+    - Cat theme background is from catstuff!
 - My friends
     - <3 luv you guys

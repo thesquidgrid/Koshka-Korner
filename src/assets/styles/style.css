@@ -3,16 +3,9 @@
 }
 
 html {
-    
     font-size: 18px;
     scrollbar-gutter: stable;
-    
 }
-
-@font-face {
-      font-family: 'AcPlus_IBM_EGA_8x14';
-      src: url('fonts/AcPlus_IBM_EGA_8x14.ttf');
-    }
 
 
 body {
@@ -22,7 +15,6 @@ body {
     justify-content: flex-start;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    
 }
 
 header h1,
@@ -106,7 +98,7 @@ pre {
 }
 
 footer {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }

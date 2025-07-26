@@ -4,8 +4,8 @@
 }
 
 :root {
-    --main-bg-color: #000;
-    --main-fg-color: #fff;
+    --main-bg-color: #fff;
+    --main-fg-color: #000;
 }
 
 html {

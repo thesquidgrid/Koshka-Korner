@@ -26,10 +26,21 @@
     <!--styles-->
     <link rel="stylesheet" href="/_site/assets/styles/normalize.css" type="text/css">
     <link rel="stylesheet" href="/_site/assets/styles/style.css" type="text/css">
-    <link rel="stylesheet" href="/_site/assets/styles/themes/contrast.css" type="text/css">
+    <!--USER STYLE-->
+    <link rel="stylesheet" type="text/css" title="light" href="/_site/assets/styles/themes/light-theme.css">
+    <link rel="alternate stylesheet" type="text/css" title="dark" href="/_site/assets/styles/themes/dark-theme.css"> 
+    <link rel="alternate stylesheet" type="text/css" title="seventies" href="/_site/assets/styles/themes/contrast.css"> 
+    <link rel="alternate stylesheet" type="text/css" title="cat" href="/_site/assets/styles/themes/cat-theme.css"> 
+
     <link rel="icon" sizes="16x16 24x24 32x32 64x64" href="/_site/favicon.ico">
   </head>
-  <body>
+  
+<head>
+     <link rel="stylesheet" type="text/css" title="default" href="light-theme.css">
+     <link rel="alternate stylesheet" type="text/css" title="light" href="dark-theme.css"> 
+</head>
+
+<body>
     <nav>
         <ol>
             <li><a href="/_site/">Home</a></li>
@@ -38,8 +49,15 @@
             
                 <li><a href="/_site/info/about/">About</a></li>
             
+                <li><a href="/_site/posts/Credits/">Credits</a></li>
+            
         </ol>
-        <ol>
+        <head>
+     <link rel="stylesheet" type="text/css" title="default" href="light-theme.css">
+     <link rel="alternate stylesheet" type="text/css" title="light" href="dark-theme.css"> 
+</head>
+
+<ol>
     <li>
         <a href="/_site/tags/updates/">#Updates</a>
     </li>
@@ -77,15 +95,86 @@
         
 
         
-            <address>Credit to the wonderful Kate Bagenzo for the amazing template: <a href="https://strawberrystarter.neocities.org/">https://strawberrystarter.neocities.org/</a></address>
+            <address><a href="https://koshka-korner.neocities.org/_site/posts/Credits/">Credits :3</a></address>
         
         <aside>
             <p>
-                <time class="lastupdate" datetime="Jul 25, 2025">Last update: Jul 25, 2025</time>
+                <time class="lastupdate" datetime="Jul 26, 2025">Last update: Jul 26, 2025</time>
                 <a href="/_site/feed.xml">RSS</a>
             </p>
             <a href="#">back to top</a>
         </aside>
     </footer>
 </body>
-</html>
+  <script>
+    // *** TO BE CUSTOMISED ***
+
+var style_cookie_name = "style" ;
+var style_cookie_duration = 30 ;
+var style_domain = "https://koshka-korner.neocities.org/_site/" ;
+
+// *** END OF CUSTOMISABLE SECTION ***
+// You do not need to customise anything below this line
+
+function switch_style ( css_title )
+{
+// You may use this script on your site free of charge provided
+// you do not remove this notice or the URL below. Script from
+// https://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+  var i, link_tag ;
+  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+    i < link_tag.length ; i++ ) {
+    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+      link_tag[i].title) {
+      link_tag[i].disabled = true ;
+      if (link_tag[i].title == css_title) {
+        link_tag[i].disabled = false ;
+      }
+    }
+    set_cookie( style_cookie_name, css_title,
+      style_cookie_duration, style_domain );
+  }
+}
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+function get_cookie ( cookie_name )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+	var cookie_string = document.cookie ;
+	if (cookie_string.length != 0) {
+		var cookie_array = cookie_string.split( '; ' );
+		for (i = 0 ; i < cookie_array.length ; i++) {
+			cookie_value = cookie_array[i].match ( cookie_name + '=(.*)' );
+			if (cookie_value != null) {
+				return decodeURIComponent ( cookie_value[1] ) ;
+			}
+		}
+	}
+	return '' ;
+}
+
+  </script>
+   <button type="button" onclick="switch_style('light');return false;" name="theme" value="Blue Theme" id="blue">Blue Theme</button>
+   <button type="button" onclick="switch_style('dark');return false;" name="theme" value="Pink Theme" id="pink">Pink Theme</button> 
+   <button type="button" onclick="switch_style('seventies');return false;" name="theme" value="Pink Theme" id="pink">Pink Theme</button> 
+   <button type="button" onclick="switch_style('cat');return false;" name="theme" value="Pink Theme" id="pink">Pink Theme</button> 
+
+
+   </html>

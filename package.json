@@ -9,7 +9,8 @@
     "build": "rimraf _site/ && npx @11ty/eleventy && node xmltojson.cjs",
     "upload": "npm run build && node _functions/upload-neo.js",
     "backup": "rimraf _backup/ && node _functions/back-up.js",
-    "run": "node xmltojson.cjs"
+    "run": "node xmltojson.cjs",
+    "watch": "watch 'npm run build' /home/sofa/Koshka-Korner"
   },
   "keywords": [],
   "author": "Kate Bagenzo",
@@ -25,6 +26,7 @@
     "jsonc": "^2.0.0",
     "postinstall": "^0.11.0",
     "rimraf": "^6.0.1",
+    "watch": "^1.0.2",
     "xml-js": "^1.6.11",
     "xml2js": "^0.6.2",
     "xml2json": "^0.12.0"

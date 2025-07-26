@@ -32,11 +32,12 @@
     // like this : "authorContact": "",
     "authorContact": "",
 
-    "creditTo": "https://strawberrystarter.neocities.org/",
+    "creditTo": "https://koshka-korner.neocities.org/_site/posts/Credits/",
 
     //contrast
     //light-mode
     //dark-mode
+    //cat-theme
     "siteStyle": "contrast",
 
     // (optional) upload your site to a subdirectory
